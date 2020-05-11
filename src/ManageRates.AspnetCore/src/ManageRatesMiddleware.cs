@@ -1,15 +1,12 @@
 ﻿using ManageRates.Core;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Options;
-using System;
 
 namespace ManageRates.AspnetCore
 {
     public class ManageRatesMiddleware
     {
-
         private readonly RequestDelegate _next;
-        private readonly ManageRatesConfiguration _manageRatesOptions;
+        private readonly ManageRatesConfiguration _configuration;
         private readonly ManageRatesService _manageRatesService;
 
 
@@ -18,7 +15,9 @@ namespace ManageRates.AspnetCore
             ManageRatesConfiguration configuration,
             ManageRatesService manageRatesService)
         {
-            
+            _next = next;
+            _configuration = configuration;
+            _manageRatesService = manageRatesService;
         }
     }
 }
