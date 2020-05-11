@@ -6,7 +6,7 @@ Manage rates
 ============
 
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Build status](https://ci.appveyor.com/api/projects/status/jrfxft7anqckn30s?svg=true)](https://ci.appveyor.com/project/msgritsenko/ManageRates)
+[![Build status](https://ci.appveyor.com/api/projects/status/s9rlmu3a06duyshc/branch/master?svg=true)](https://ci.appveyor.com/project/msgritsenko/managerates/branch/master)
 [![NuGet](https://img.shields.io/nuget/v/AspNetCoreRateLimit.svg)](https://www.nuget.org/packages/ManageRates.AspnetCore/) 
 
 
