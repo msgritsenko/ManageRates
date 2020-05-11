@@ -1,7 +1,13 @@
 ﻿<Project>
   <Import Project="..\Directory.Build.props" />
+
   <PropertyGroup>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsUnitTestProject>false</IsUnitTestProject>
+    <IsUnitTestProject Condition="$(MSBuildProjectName.EndsWith('.Tests')) ">true</IsUnitTestProject>
+    <ExcludeFromSourceBuild Condition="'$(IsUnitTestProject)' == 'true' ">true</ExcludeFromSourceBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(IsUnitTestProject)' != 'true' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <IsPackable>true</IsPackable>
     <IncludeSymbols>true</IncludeSymbols>
@@ -12,7 +18,8 @@
     <RepositoryType>git</RepositoryType>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
-  <ItemGroup>
+  
+  <ItemGroup Condition=" '$(IsUnitTestProject)' != 'true' ">
     <None Include="$(MSBuildThisFileDirectory)..\LICENSE" Pack="true" PackagePath="" Visible="false"/>
   </ItemGroup>
 </Project>
