@@ -1,8 +1,4 @@
-version: "{build}"
 image: Ubuntu2004
-
-pull_requests:
-  do_not_increment_build_number: true
 
 branches:
   only:
@@ -13,11 +9,12 @@ nuget:
 
 build_script:
   - git clean --ffxd
-  - dotnet restore
-  - dotnet build
-  - dotnet pack ./src/ManageRates.sln -c Release -o ./artifacts
+  - dotnet restore ./src
+  - dotnet build ./src -c Release
+  - dotnet test ./src -c Release
+  - dotnet pack ./src -c Release -o ./artifacts
 
 test: off
 artifacts:
-  - path: .\artifacts\*.nupkg
+  - path: ./artifacts/*.nupkg
     name: NuGet
