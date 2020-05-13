@@ -11,32 +11,20 @@ namespace ManageRates.Core.Tests
     {
         private const string key = "123";
 
-        [Fact]
-        public async Task Process_PolicyAlwaysFalse_ReturnFalse()
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        public async Task Process_PolicyAlwaysValue_ReturnValue(bool value)
         {
             var policyMock = new Mock<IManageRatePolicy>();
-            policyMock.Setup(p => p.IsPermitted(It.IsAny<string>())).ReturnsAsync(false);
+            policyMock.Setup(p => p.IsPermitted(It.IsAny<string>())).ReturnsAsync(value);
 
             var service = new ManageRatesService();
 
             var request = new ManageRatesRequest(key, policyMock.Object);
             var result = await service.Process(request);
 
-            Assert.False(result.Permitted);
-        }
-
-        [Fact]
-        public async Task Process_PolicyAlwaysTrue_ReturnTrue()
-        {
-            var policyMock = new Mock<IManageRatePolicy>();
-            policyMock.Setup(p => p.IsPermitted(It.IsAny<string>())).ReturnsAsync(true);
-
-            var service = new ManageRatesService();
-
-            var request = new ManageRatesRequest(key, policyMock.Object);
-            var result = await service.Process(request);
-
-            Assert.True(result.Permitted);
+            Assert.Equal(value, result.Permitted);
         }
 
         [Fact]
