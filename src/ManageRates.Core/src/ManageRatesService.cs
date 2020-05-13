@@ -1,16 +1,25 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-using System;
+﻿using ManageRates.Core.Abstractions;
+using ManageRates.Core.Model;
+using System.Threading.Tasks;
 
 namespace ManageRates.Core
 {
-    public class ManageRatesService
+    /// <summary>
+    /// Default implementation of <see cref="IManageRatePolicy"/>.
+    /// </summary>
+    public class ManageRatesService : IManageRatesService
     {
-        private readonly IMemoryCache _memoryCache;
-        public ManageRatesService(IMemoryCache memoryCache)
+        public ManageRatesService()
         {
-            _memoryCache = memoryCache;
         }
 
+        
+        public async Task<ManageRatesResult> Process(ManageRatesRequest request)
+        {
+            var permitted = await request.Policy.IsPermitted(request.Key);
 
+            var result = new ManageRatesResult(permitted);
+            return result;
+        }
     }
 }
