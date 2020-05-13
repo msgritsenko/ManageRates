@@ -5,12 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\ManageRates.AspnetCore\src\ManageRates.AspnetCore.csproj" />
-    <ProjectReference Include="..\..\src\ManageRates.Core\src\ManageRates.Core.csproj" />
+    <PackageReference Include="ManageRates.AspnetCore" Version="0.0.*" />
   </ItemGroup>
 
 </Project>
