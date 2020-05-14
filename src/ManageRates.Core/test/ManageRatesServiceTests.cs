@@ -1,8 +1,6 @@
 using ManageRates.Core.Abstractions;
 using ManageRates.Core.Model;
 using Moq;
-using System;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace ManageRates.Core.Tests
@@ -14,33 +12,33 @@ namespace ManageRates.Core.Tests
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
-        public async Task Process_PolicyAlwaysValue_ReturnValue(bool value)
+        public void Process_PolicyAlwaysValue_ReturnValue(bool value)
         {
-            var policyMock = new Mock<IManageRatePolicy>();
-            policyMock.Setup(p => p.IsPermitted(It.IsAny<string>())).ReturnsAsync(value);
+            var policyMock = new Mock<IKeyedManageRatePolicy>();
+            policyMock.Setup(p => p.IsPermitted(It.IsAny<string>())).Returns(value);
 
             var service = new ManageRatesService();
 
-            var request = new ManageRatesRequest(key, policyMock.Object);
-            var result = await service.Process(request);
+            var request = new KeyedManageRatesRequest(key, policyMock.Object);
+            var result = service.Process(request);
 
             Assert.Equal(value, result.Permitted);
         }
 
         [Fact]
-        public async Task Process_PolicyReturnIfRequestIsOdd_ReturnFalseThenTrue()
+        public void Process_PolicyReturnIfRequestIsOdd_ReturnFalseThenTrue()
         {
-            var policyMock = new Mock<IManageRatePolicy>();
+            var policyMock = new Mock<IKeyedManageRatePolicy>();
             int requestCounter = 0;
-            policyMock.Setup(p => p.IsPermitted(It.IsAny<string>())).ReturnsAsync(requestCounter++ % 2 == 1);
+            policyMock.Setup(p => p.IsPermitted(It.IsAny<string>())).Returns(requestCounter++ % 2 == 1);
 
             var service = new ManageRatesService();
-            var request = new ManageRatesRequest(key, policyMock.Object);
+            var request = new KeyedManageRatesRequest(key, policyMock.Object);
 
-            var result1 = await service.Process(request);
+            var result1 = service.Process(request);
             Assert.False(result1.Permitted);
 
-            var result2 = await service.Process(request);
+            var result2 = service.Process(request);
             Assert.False(result2.Permitted);
         }
     }

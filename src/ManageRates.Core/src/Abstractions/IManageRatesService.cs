@@ -1,5 +1,4 @@
 ﻿using ManageRates.Core.Model;
-using System.Threading.Tasks;
 
 namespace ManageRates.Core.Abstractions
 {
@@ -9,10 +8,17 @@ namespace ManageRates.Core.Abstractions
     public interface IManageRatesService
     {
         /// <summary>
+        /// Calculate whether resource is available by key.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        ManageRatesResult Process(KeyedManageRatesRequest request);
+        
+        /// <summary>
         /// Calculate whether resource is available.
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        Task<ManageRatesResult> Process(ManageRatesRequest request);
+        ManageRatesResult Process(ManageRatesRequest request);
     }
 }
