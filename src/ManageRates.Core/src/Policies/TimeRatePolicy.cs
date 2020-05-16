@@ -11,7 +11,6 @@ namespace ManageRates.Core.Policies
     {
         private readonly TimeSpan _ratePeriod;
         private readonly int _rateCount;
-        private readonly ITimeService _timeService;
         private readonly Queue<DateTime> _timeStorage;
 
         /// <summary>
@@ -22,24 +21,22 @@ namespace ManageRates.Core.Policies
         /// <param name="timeService"></param>
         public TimeRatePolicy(
             TimeSpan ratePeriod, 
-            int rateCount,
-            ITimeService timeService)
+            int rateCount)
         {
             _ratePeriod = ratePeriod;
             _rateCount = rateCount;
-            _timeService = timeService;
             _timeStorage = new Queue<DateTime>();
         }
 
         /// <inheritdoc/>
-        public bool IsPermitted()
+        public bool IsPermitted(ITimeService timeService)
         {
             var timeQueue = _timeStorage;
             lock (timeQueue)
             {
-                var currentTime = _timeService.GetUTC();
+                var currentTime = timeService.GetUTC();
 
-                if (timeQueue.Count >= 0)
+                if (timeQueue.Count > 0)
                 {
                     var lstTiime = timeQueue.Peek();
                     if ((currentTime - lstTiime) > _ratePeriod)

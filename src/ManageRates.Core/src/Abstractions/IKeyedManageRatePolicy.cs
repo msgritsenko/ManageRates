@@ -10,6 +10,6 @@
         /// </summary>
         /// <param name="key">Identificator of a resource.</param>
         /// <returns>Resource's availability.</returns>
-        bool IsPermitted(string key);
+        bool IsPermitted(string key, ITimeService timeService);
     }
 }

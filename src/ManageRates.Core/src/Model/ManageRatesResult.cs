@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents the result of a resource availbility check.
     /// </summary>
-    public sealed class ManageRatesResult
+    public struct ManageRatesResult
     {
         /// <summary>
         /// Access to a resource permitted.

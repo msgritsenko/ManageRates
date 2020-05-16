@@ -15,11 +15,11 @@ namespace ManageRates.Core.Tests.Policies
             var timeServiceMock = new Mock<ITimeService>();
             timeServiceMock.Setup(t => t.GetUTC()).Returns(testTime);
 
-            var policy = new TimeRatePolicy(TimeSpan.FromSeconds(1), 2, timeServiceMock.Object);
+            var policy = new TimeRatePolicy(TimeSpan.FromSeconds(1), 2);
 
-            Assert.True(policy.IsPermitted());
-            Assert.True(policy.IsPermitted());
-            Assert.False(policy.IsPermitted());
+            Assert.True(policy.IsPermitted(timeServiceMock.Object));
+            Assert.True(policy.IsPermitted(timeServiceMock.Object));
+            Assert.False(policy.IsPermitted(timeServiceMock.Object));
         }
 
         public void IsPermitted_IncreasingTime_ReturnsTrueAlways()
@@ -29,11 +29,11 @@ namespace ManageRates.Core.Tests.Policies
             var timeServiceMock = new Mock<ITimeService>();
             timeServiceMock.Setup(t => t.GetUTC()).Returns(() => (testTime = testTime.AddSeconds(2)));
 
-            var policy = new TimeRatePolicy(TimeSpan.FromSeconds(1), 2, timeServiceMock.Object);
+            var policy = new TimeRatePolicy(TimeSpan.FromSeconds(1), 2);
 
-            Assert.True(policy.IsPermitted());
-            Assert.True(policy.IsPermitted());
-            Assert.True(policy.IsPermitted());
+            Assert.True(policy.IsPermitted(timeServiceMock.Object));
+            Assert.True(policy.IsPermitted(timeServiceMock.Object));
+            Assert.True(policy.IsPermitted(timeServiceMock.Object));
         }
     }
 }

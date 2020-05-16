@@ -19,7 +19,7 @@ namespace ManageRates.Core
         public static IKeyedManageRatePolicy BuildKeyedDefaultPolicy(TimeSpan ratePeriod, int rateCount)
         {
             var timeService = new TimeService();
-            return new KeyedTimeRatePolicy(ratePeriod, rateCount, timeService);
+            return new KeyedTimeRatePolicy(ratePeriod, rateCount);
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace ManageRates.Core
         public static IManageRatePolicy BuildDefaultPolicy(TimeSpan ratePeriod, int rateCount)
         {
             var timeService = new TimeService();
-            return new TimeRatePolicy(ratePeriod, rateCount, timeService);
+            return new TimeRatePolicy(ratePeriod, rateCount);
         }
 
         /// <summary>

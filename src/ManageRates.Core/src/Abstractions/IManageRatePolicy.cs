@@ -9,6 +9,6 @@
         /// Calculates whether a resource permitted for using.
         /// </summary>
         /// <returns>Resource's availability.</returns>
-        bool IsPermitted();
+        bool IsPermitted(ITimeService timeService);
     }
 }

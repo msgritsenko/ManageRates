@@ -12,7 +12,6 @@ namespace ManageRates.Core.Policies
     {
         private readonly TimeSpan _ratePeriod;
         private readonly int _rateCount;
-        private readonly ITimeService _timeService;
         private readonly ConcurrentDictionary<string, Queue<DateTime>> _timeStorage;
 
         /// <summary>
@@ -23,25 +22,23 @@ namespace ManageRates.Core.Policies
         /// <param name="timeService"></param>
         public KeyedTimeRatePolicy(
             TimeSpan ratePeriod, 
-            int rateCount,
-            ITimeService timeService)
+            int rateCount)
         {
             _ratePeriod = ratePeriod;
             _rateCount = rateCount;
-            _timeService = timeService;
             _timeStorage = new ConcurrentDictionary<string, Queue<DateTime>>();
         }
 
         /// <inheritdoc/>
-        public bool IsPermitted(string key)
+        public bool IsPermitted(string key, ITimeService timeService)
         {
             var timeQueue = _timeStorage.GetOrAdd(key, key => new Queue<DateTime>(_rateCount));
 
             lock (timeQueue)
             {
-                var currentTime = _timeService.GetUTC();
+                var currentTime = timeService.GetUTC();
 
-                if (timeQueue.Count >= 0)
+                if (timeQueue.Count > 0)
                 {
                     var lstTiime = timeQueue.Peek();
                     if ((currentTime - lstTiime) > _ratePeriod)

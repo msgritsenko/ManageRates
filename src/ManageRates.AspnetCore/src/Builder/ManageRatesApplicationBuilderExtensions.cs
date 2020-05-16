@@ -1,29 +1,23 @@
 ﻿using ManageRates.AspnetCore;
 using ManageRates.Core;
-using Microsoft.AspNetCore.Builder;
-using System;
+using ManageRates.Core.Abstractions;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
+    /// <summary>
+    /// Extension methods to add rate manage capabilities to DI.
+    /// </summary>
     public static class ManageRatesApplicationBuilderExtensions
     {
+        /// <summary>
+        /// Add required services to <see cref="IServiceCollection"/>.
+        /// </summary>
+        /// <param name="services"></param>
         public static void AddRateStrictions(this IServiceCollection services)
         {
+            services.AddSingleton<ITimeService, TimeService>();
             services.AddSingleton<ManageRatesService>();
             services.AddSingleton<ManageRatesMiddleware>();
-        }
-
-        public static void UseRateStrictions(this IApplicationBuilder app)
-        {
-            app.UseRateStrictions(configuration => { });
-        }
-
-        public static void UseRateStrictions(this IApplicationBuilder app, Action<ManageRatesConfiguration> configureConfiguration)
-        {
-            var configuration = new ManageRatesConfiguration();
-            configureConfiguration(configuration);
-
-            app.UseMiddleware<ManageRatesMiddleware>(configuration);
         }
     }
 }
