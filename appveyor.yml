@@ -14,7 +14,7 @@ build_script:
   - dotnet restore ./src
   - dotnet build ./src -c Release
   - dotnet test ./src -c Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput='../../../artifacts/'
-  - dotnet pack ./src -c Release -o ./artifacts /p:VersionPrefix={version}
+  - dotnet pack ./src -c Release -o ./artifacts /p:VersionPrefix=$version
   - bash <(curl -s https://codecov.io/bash)
 
 test: off
