@@ -1,6 +1,6 @@
 
 # Important
-This project is under construction. Do not use it before the first release version which will be `2.0.0`
+This project is under construction. Do not use it before the first release version which will be `1.0.0`
 
 Manage rates
 ============

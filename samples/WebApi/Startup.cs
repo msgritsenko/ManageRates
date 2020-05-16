@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ManageRates.AspnetCore;
+using ManageRates.AspnetCore.Builder;
+using ManageRates.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace WebApi
 {
@@ -29,9 +26,6 @@ namespace WebApi
 
             // Register rate strictions services.
             services.AddRateStrictions();
-
-            // Cache cource for manage rate strictions.
-            services.AddMemoryCache();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,24 +37,19 @@ namespace WebApi
             }
 
             app.UseHttpsRedirection();
-
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             // Attention! RateStrictions middleware should be places between UseRouting and UseEndpoints.
-            app.UseRateStrictions(configuration =>
-            {
-                //configuration.UseEndpoints();
-                //configuration.AddUri("/api/**/info", mode, count, period);
-                //configuration.AddUriGet("/api/**/", mode, count, period);
-                //configuration.AddUri("uripatter", mode, count, period, Methods [Get, Post]);
-                //configuration.UseStatistics();
-            });
+            app.UseMiddleware<ManageRatesMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapGet("/_info", context => context.Response.WriteAsync("success"))
+                    // Limit for each IP take information.
+                    .ManageRatesByIp(1, RatesStrictPeriod.Minute);
+
                 endpoints.MapControllers();
             });
         }

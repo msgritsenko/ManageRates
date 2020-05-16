@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ManageRates.AspnetCore;
 using ManageRates.Core;
 
 namespace WebApi.Controllers
@@ -21,24 +16,27 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [RateStriction( RatesStrictsMode.User, 4, RatesStrictPeriod.Second)]
+        [EndpointManageRate(4, RatesStrictPeriod.Second)]
         public string Yes()
         {
+            _logger.LogInformation("called method{method}", nameof(Yes));
             return "yes";
         }
 
 
         [HttpGet]
-        [UserRateStriction(4, RatesStrictPeriod.Second)]
+        [UserManageRate(4, RatesStrictPeriod.Second)]
         public string No()
         {
+            _logger.LogInformation("called method{method}", nameof(No));
             return "no";
         }
 
         [HttpGet]
-        [IPRateStriction(4, RatesStrictPeriod.Second)]
+        [IpManageRate(4, RatesStrictPeriod.Second)]
         public string Fail(int failCode)
         {
+            _logger.LogInformation("called method{method}", nameof(Fail));
             return $"fail {failCode}";
         }
     }
