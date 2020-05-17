@@ -5,10 +5,8 @@ using Microsoft.AspNetCore.Http;
 
 namespace ManageRates.AspnetCore
 {
-    /// <summary>
-    /// Service for mana
-    /// </summary>
-    public class ManageRatesService 
+    /// <inheritdoc/>
+    public class ManageRatesService : IManageRatesService
     {
         private readonly ITimeService _timeService;
 

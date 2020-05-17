@@ -4,26 +4,22 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using System;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Security.Principal;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Integration.Tests
 {
-    public class IntegrationalTest : IClassFixture<WebApplicationFactory<WebApi.Startup>>
+    public class IntegrationTest : IClassFixture<WebApplicationFactory<WebApi.Startup>>
     {
-        private readonly WebApplicationFactory<WebApi.Startup> _factory;
-        private readonly Mock<ITimeService> _timeServiceMock;
         private readonly DateTime _baseTime;
+        private readonly Mock<ITimeService> _timeServiceMock;
+        private readonly WebApplicationFactory<WebApi.Startup> _factory;
 
-        public IntegrationalTest(WebApplicationFactory<WebApi.Startup> factory)
+        public IntegrationTest(WebApplicationFactory<WebApi.Startup> factory)
         {
-            _factory = factory;
             _baseTime = new DateTime(2020, 01, 01);
-
             _timeServiceMock = new Mock<ITimeService>();
 
             _factory = factory
@@ -37,9 +33,10 @@ namespace Integration.Tests
         }
 
         [Theory]
-        [InlineData("/yesno/yes")]
+        [InlineData("/ControllerAttribute")]
+        [InlineData("/MethodAttributes/endpoint")]
         [InlineData("/endpoint")]
-        public async Task CheckTwoTimesPerSecondEndpoints(string endpoint)
+        public async Task TestTwoTimesPerSecondEndpoints(string endpoint)
         {
             _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
             using var client = _factory.CreateClient();
@@ -64,8 +61,8 @@ namespace Integration.Tests
 
         [Theory]
         [InlineData("/user")]
-        [InlineData("/yesno/no")]
-        public async Task TestUserStrictionsEndpoints(string endpoint)
+        [InlineData("/MethodAttributes/user")]
+        public async Task TestkTwoTimesPerSecondUserStrictionsEndpoints(string endpoint)
         {
             _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
             var server = _factory.Server;
@@ -101,8 +98,8 @@ namespace Integration.Tests
 
         [Theory]
         [InlineData("/ip")]
-        [InlineData("/yesno/fail")]
-        public async Task TestIpRateForTwoDifferentIP(string endpoint)
+        [InlineData("/MethodAttributes/ip")]
+        public async Task TestkTwoTimesPerSecondIpStrictionsEndpoints(string endpoint)
         {
             _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
             var server = _factory.Server;
@@ -134,7 +131,7 @@ namespace Integration.Tests
         }
 
         [Fact]
-        public async Task TestDelegateRate()
+        public async Task TestBlockedByDelegate()
         {
             using var client = _factory.CreateClient();
 

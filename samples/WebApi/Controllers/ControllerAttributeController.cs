@@ -1,20 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using ManageRates.Core;
 
 namespace WebApi.Controllers
 {
+    /// <summary>
+    /// Sample of using attributes for whole controller.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     [EndpointManageRate(2, RatesStrictPeriod.Second)]
-    public class RepeatController : ControllerBase
+    public class ControllerAttributeController : ControllerBase
     {
-        private readonly ILogger<RepeatController> _logger;
-
-        public RepeatController(ILogger<RepeatController> logger)
-        {
-            _logger = logger;
-        }
 
         [HttpGet]
         public string Index()

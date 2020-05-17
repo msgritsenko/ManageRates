@@ -46,7 +46,7 @@ namespace WebApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/endpoint", context => context.Response.WriteAsync("endpoint"))
-                                    .ManageRates(2, RatesStrictPeriod.Second);
+                    .ManageRates(2, RatesStrictPeriod.Second);
 
                 endpoints.MapGet("/user", context => context.Response.WriteAsync("user"))
                     .ManageRatesByUser(2, RatesStrictPeriod.Second);
@@ -55,7 +55,7 @@ namespace WebApi
                     .ManageRatesByIp(2, RatesStrictPeriod.Second);
 
                 endpoints.MapGet("/delegate", context => context.Response.WriteAsync("delegate"))
-                    .ManageRates((c, t) => new ManageRatesResult(false));
+                    .ManageRatesByDelegate((c, t) => new ManageRatesResult(false));
 
                 endpoints.MapControllers();
             });

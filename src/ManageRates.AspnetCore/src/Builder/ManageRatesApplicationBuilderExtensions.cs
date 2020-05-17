@@ -1,4 +1,5 @@
 ﻿using ManageRates.AspnetCore;
+using ManageRates.AspnetCore.Abstractions;
 using ManageRates.Core;
 using ManageRates.Core.Abstractions;
 
@@ -12,11 +13,10 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <summary>
         /// Add required services to <see cref="IServiceCollection"/>.
         /// </summary>
-        /// <param name="services"></param>
         public static void AddRateStrictions(this IServiceCollection services)
         {
             services.AddSingleton<ITimeService, TimeService>();
-            services.AddSingleton<ManageRatesService>();
+            services.AddSingleton<IManageRatesService, ManageRatesService>();
         }
     }
 }

@@ -42,7 +42,7 @@ namespace ManageRates.AspnetCore.Builder
             return builder;
         }
 
-        public static TBuilder ManageRates<TBuilder>(this TBuilder builder, Func<HttpContext, ITimeService, ManageRatesResult> delegatePolicy)
+        public static TBuilder ManageRatesByDelegate<TBuilder>(this TBuilder builder, Func<HttpContext, ITimeService, ManageRatesResult> delegatePolicy)
             where TBuilder : IEndpointConventionBuilder
         {
             IHttpContextRatePolicy policy = new DelegateManageRatePolicy(delegatePolicy);

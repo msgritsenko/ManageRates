@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+﻿using ManageRates.AspnetCore.Abstractions;
+using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.TestHost;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Moq;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -13,99 +10,56 @@ namespace ManageRates.AspnetCore.Tests
 {
     public class ManageRatesMiddlewareTests
     {
-        private const int HighLoadRequestsCount = 100_000;
-
         [Fact]
-        public async Task SequentialHighLoadTest_EmptyMiddleware_ReturnsOk()
+        public void Ctor_ManageRatesServiceIsNull_ThrowsException()
         {
-            using var host = await CreateRawTestServer();
-            using var client = host.GetTestClient();
+            RequestDelegate requestDelegate = c => Task.CompletedTask;
 
-            for (int i = 0; i < HighLoadRequestsCount; ++i)
-            {
-                var response = await client.GetAsync("/");
-                response.EnsureSuccessStatusCode();
-
-                var answer = await response.Content.ReadAsStringAsync();
-                Assert.Equal("ok", answer, true);
-            }
+            Assert.Throws<ArgumentNullException>("manageRatesService", () => new ManageRatesMiddleware(requestDelegate, null));
         }
 
         [Fact]
-        public async Task ParallelHighLoadTest_EmptyMiddleware_ReturnsOk()
+        public async Task InvokeAsync_HttpContextIsNull_ThrowsException()
         {
-            using var host = await CreateRawTestServer();
-            using var client = host.GetTestClient();
+            var manageRatesServiceMock = new Mock<IManageRatesService>();
+            RequestDelegate requestDelegate = c => Task.CompletedTask;
 
-            int responseCount = 0;
+            var middleware = new ManageRatesMiddleware(requestDelegate, manageRatesServiceMock.Object);
 
-            for (int i = 0; i < HighLoadRequestsCount; ++i)
-            {
-#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
-                Task.Run(() =>
-                {
-                    var response = client.GetAsync("/");
-                    response.ContinueWith(task =>
-                    {
-                        Interlocked.Increment(ref responseCount);
-                    });
-                });
-#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
-            }
-
-            // wait while all tasks finished
-            var timeWait = TimeSpan.FromMilliseconds(100);
-            while (responseCount < HighLoadRequestsCount)
-            {
-                await Task.Delay(timeWait);
-            }
+            await Assert.ThrowsAsync<ArgumentNullException>("httpContext", () => middleware.InvokeAsync(null));
+            manageRatesServiceMock.VerifyNoOtherCalls();
         }
 
-        /// <summary>
-        /// Test server without any middleware in pipeline.
-        /// </summary>
-        /// <returns></returns>
-        private static Task<IHost> CreateRawTestServer()
+        [Fact] 
+        public async Task InvokeAsync_ManageRatesServiceReturnsFalse_ReturnsTooManyRequests()
         {
-            return CreateTestHost(
-                services => { },
-                app =>
-                    app.Run(async context =>
-                    {
-                        await context.Response.WriteAsync("ok");
-                    })
-            );
+            var manageRatesServiceMock = new Mock<IManageRatesService>();
+            manageRatesServiceMock.Setup(s => s.Process(It.IsAny<HttpContext>())).Returns(new ManageRatesResult(false));
+            RequestDelegate requestDelegate = c => Task.CompletedTask;
+
+            var middleware = new ManageRatesMiddleware(requestDelegate, manageRatesServiceMock.Object);
+            var http = new DefaultHttpContext();
+
+            await middleware.InvokeAsync(http);
+
+            Assert.Equal(StatusCodes.Status429TooManyRequests, http.Response.StatusCode);
         }
 
-
-        /// <summary>
-        /// Most common part of configuration of the test Service.
-        /// </summary>
-        /// <param name="configureServices">Action to configure DI services.</param>
-        /// <param name="configureApp">Action to configure application pipeline.</param>
-        /// <returns></returns>
-        private static Task<IHost> CreateTestHost(
-            Action<IServiceCollection> configureServices,
-            Action<IApplicationBuilder> configureApp)
+        [Fact]
+        public async Task InvokeAsync_ManageRatesServiceReturnsTrue_ReturnsTaskFromNextRequest()
         {
-            var host = new HostBuilder()
-                .ConfigureServices((context, services) =>
-                {
-                    configureServices(services);
-                })
-                .ConfigureWebHost(webBuilder =>
-                {
-                    webBuilder
-                        .UseTestServer()
-                        .Configure(app =>
-                        {
-                            configureApp(app);
+            var manageRatesServiceMock = new Mock<IManageRatesService>();
+            manageRatesServiceMock.Setup(s => s.Process(It.IsAny<HttpContext>())).Returns(new ManageRatesResult(true));
+            
+            Task expectedTask = Task.FromResult(7);
+            RequestDelegate requestDelegate = c => expectedTask;
 
-                        });
-                })
-                .StartAsync();
+            var middleware = new ManageRatesMiddleware(requestDelegate, manageRatesServiceMock.Object);
+            var http = new DefaultHttpContext();
 
-            return host;
+            var actualTask = middleware.InvokeAsync(http);
+
+            Assert.Same(expectedTask, actualTask);
         }
     }
 }

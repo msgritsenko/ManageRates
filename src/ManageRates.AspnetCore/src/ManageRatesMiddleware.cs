@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ManageRates.AspnetCore.Abstractions;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Threading.Tasks;
 
@@ -7,14 +8,14 @@ namespace ManageRates.AspnetCore
     public class ManageRatesMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ManageRatesService _manageRatesService;
+        private readonly IManageRatesService _manageRatesService;
 
         public ManageRatesMiddleware(
             RequestDelegate next,
-            ManageRatesService manageRatesService)
+            IManageRatesService manageRatesService)
         {
             _next = next;
-            _manageRatesService = manageRatesService;
+            _manageRatesService = manageRatesService ?? throw new ArgumentNullException(nameof(manageRatesService));
         }
 
         public Task InvokeAsync(HttpContext httpContext)
