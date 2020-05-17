@@ -5,7 +5,7 @@ using ManageRates.Core;
 namespace WebApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class YesNoController : ControllerBase
     {
         private readonly ILogger<YesNoController> _logger;
@@ -16,7 +16,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [EndpointManageRate(4, RatesStrictPeriod.Second)]
+        [EndpointManageRate(2, RatesStrictPeriod.Second)]
         public string Yes()
         {
             _logger.LogInformation("called method{method}", nameof(Yes));
@@ -25,7 +25,7 @@ namespace WebApi.Controllers
 
 
         [HttpGet]
-        [UserManageRate(4, RatesStrictPeriod.Second)]
+        [UserManageRate(2, RatesStrictPeriod.Second)]
         public string No()
         {
             _logger.LogInformation("called method{method}", nameof(No));
@@ -33,11 +33,11 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        [IpManageRate(4, RatesStrictPeriod.Second)]
-        public string Fail(int failCode)
+        [IpManageRate(2, RatesStrictPeriod.Second)]
+        public string Fail()
         {
             _logger.LogInformation("called method{method}", nameof(Fail));
-            return $"fail {failCode}";
+            return $"fail";
         }
     }
 }

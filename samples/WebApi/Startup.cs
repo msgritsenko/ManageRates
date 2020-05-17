@@ -1,6 +1,7 @@
 using ManageRates.AspnetCore;
 using ManageRates.AspnetCore.Builder;
 using ManageRates.Core;
+using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -38,17 +39,23 @@ namespace WebApi
 
             app.UseHttpsRedirection();
             app.UseRouting();
-            app.UseAuthorization();
 
             // Attention! RateStrictions middleware should be places between UseRouting and UseEndpoints.
             app.UseMiddleware<ManageRatesMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGet("/endpoint", context => context.Response.WriteAsync("endpoint"))
+                                    .ManageRates(2, RatesStrictPeriod.Second);
 
-                endpoints.MapGet("/_info", context => context.Response.WriteAsync("success"))
-                    // Limit for each IP take information.
-                    .ManageRatesByIp(1, RatesStrictPeriod.Minute);
+                endpoints.MapGet("/user", context => context.Response.WriteAsync("user"))
+                    .ManageRatesByUser(2, RatesStrictPeriod.Second);
+
+                endpoints.MapGet("/ip", context => context.Response.WriteAsync("ip"))
+                    .ManageRatesByIp(2, RatesStrictPeriod.Second);
+
+                endpoints.MapGet("/delegate", context => context.Response.WriteAsync("delegate"))
+                    .ManageRates((c, t) => new ManageRatesResult(false));
 
                 endpoints.MapControllers();
             });

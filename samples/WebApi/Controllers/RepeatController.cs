@@ -4,12 +4,9 @@ using ManageRates.Core;
 
 namespace WebApi.Controllers
 {
-    /// <summary>
-    /// Sample of rate limit for whole cotroller, 
-    /// </summary>
     [ApiController]
     [Route("[controller]")]
-    [IpManageRate(4, RatesStrictPeriod.Second)]
+    [EndpointManageRate(2, RatesStrictPeriod.Second)]
     public class RepeatController : ControllerBase
     {
         private readonly ILogger<RepeatController> _logger;
@@ -20,9 +17,9 @@ namespace WebApi.Controllers
         }
 
         [HttpGet]
-        public string Index(string message)
+        public string Index()
         {
-            return message;
+            return "index";
         }
     }
 }
