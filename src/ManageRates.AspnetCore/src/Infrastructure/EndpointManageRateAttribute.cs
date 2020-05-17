@@ -13,11 +13,11 @@ namespace ManageRates.Core
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
     public class EndpointManageRateAttribute : Attribute, IHttpContextRatePolicy
     {
-        private readonly EnpointManageRatePolicy _policy;
+        private readonly EndpointManageRatePolicy _policy;
 
         public EndpointManageRateAttribute(int count, RatesStrictPeriod period)
         {
-            _policy = new EnpointManageRatePolicy(count, period);
+            _policy = new EndpointManageRatePolicy(count, period);
         }
 
         /// <inheritdoc/>

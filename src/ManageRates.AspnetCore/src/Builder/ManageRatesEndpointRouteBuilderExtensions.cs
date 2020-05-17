@@ -36,7 +36,7 @@ namespace ManageRates.AspnetCore.Builder
         public static TBuilder ManageRates<TBuilder>(this TBuilder builder, int count, RatesStrictPeriod period)
             where TBuilder : IEndpointConventionBuilder
         {
-            IHttpContextRatePolicy policy = new EnpointManageRatePolicy(count, period);
+            IHttpContextRatePolicy policy = new EndpointManageRatePolicy(count, period);
             builder.Add(endpointBuilder => endpointBuilder.Metadata.Add(policy));
 
             return builder;

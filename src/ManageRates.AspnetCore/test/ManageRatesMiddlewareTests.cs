@@ -1,6 +1,8 @@
 ﻿using ManageRates.AspnetCore.Abstractions;
+using ManageRates.AspnetCore.Configuration;
 using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
 using Moq;
 using System;
 using System.Threading.Tasks;
@@ -14,8 +16,8 @@ namespace ManageRates.AspnetCore.Tests
         public void Ctor_ManageRatesServiceIsNull_ThrowsException()
         {
             RequestDelegate requestDelegate = c => Task.CompletedTask;
-
-            Assert.Throws<ArgumentNullException>("manageRatesService", () => new ManageRatesMiddleware(requestDelegate, null));
+            var options = Options.Create(new ManageRatesConfiguration());
+            Assert.Throws<ArgumentNullException>("manageRatesService", () => new ManageRatesMiddleware(requestDelegate, options, null));
         }
 
         [Fact]
@@ -23,8 +25,9 @@ namespace ManageRates.AspnetCore.Tests
         {
             var manageRatesServiceMock = new Mock<IManageRatesService>();
             RequestDelegate requestDelegate = c => Task.CompletedTask;
+            var options = Options.Create(new ManageRatesConfiguration());
 
-            var middleware = new ManageRatesMiddleware(requestDelegate, manageRatesServiceMock.Object);
+            var middleware = new ManageRatesMiddleware(requestDelegate, options, manageRatesServiceMock.Object);
 
             await Assert.ThrowsAsync<ArgumentNullException>("httpContext", () => middleware.InvokeAsync(null));
             manageRatesServiceMock.VerifyNoOtherCalls();
@@ -34,10 +37,14 @@ namespace ManageRates.AspnetCore.Tests
         public async Task InvokeAsync_ManageRatesServiceReturnsFalse_ReturnsTooManyRequests()
         {
             var manageRatesServiceMock = new Mock<IManageRatesService>();
-            manageRatesServiceMock.Setup(s => s.Process(It.IsAny<HttpContext>())).Returns(new ManageRatesResult(false));
+            manageRatesServiceMock
+                .Setup(s => s.Process(It.IsAny<HttpContext>(), It.IsAny<ManageRatesConfiguration>()))
+                    .Returns(new ManageRatesResult(false));
             RequestDelegate requestDelegate = c => Task.CompletedTask;
 
-            var middleware = new ManageRatesMiddleware(requestDelegate, manageRatesServiceMock.Object);
+            var options = Options.Create(new ManageRatesConfiguration());
+
+            var middleware = new ManageRatesMiddleware(requestDelegate, options, manageRatesServiceMock.Object);
             var http = new DefaultHttpContext();
 
             await middleware.InvokeAsync(http);
@@ -49,12 +56,14 @@ namespace ManageRates.AspnetCore.Tests
         public async Task InvokeAsync_ManageRatesServiceReturnsTrue_ReturnsTaskFromNextRequest()
         {
             var manageRatesServiceMock = new Mock<IManageRatesService>();
-            manageRatesServiceMock.Setup(s => s.Process(It.IsAny<HttpContext>())).Returns(new ManageRatesResult(true));
+            manageRatesServiceMock
+                .Setup(s => s.Process(It.IsAny<HttpContext>(), It.IsAny<ManageRatesConfiguration>()))
+                    .Returns(new ManageRatesResult(true));
             
             Task expectedTask = Task.FromResult(7);
             RequestDelegate requestDelegate = c => expectedTask;
-
-            var middleware = new ManageRatesMiddleware(requestDelegate, manageRatesServiceMock.Object);
+            var options = Options.Create(new ManageRatesConfiguration());
+            var middleware = new ManageRatesMiddleware(requestDelegate, options, manageRatesServiceMock.Object);
             var http = new DefaultHttpContext();
 
             var actualTask = middleware.InvokeAsync(http);

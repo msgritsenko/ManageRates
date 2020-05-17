@@ -1,4 +1,5 @@
-﻿using ManageRates.Core.Model;
+﻿using ManageRates.AspnetCore.Configuration;
+using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
 
 namespace ManageRates.AspnetCore.Abstractions
@@ -13,6 +14,6 @@ namespace ManageRates.AspnetCore.Abstractions
         /// </summary>
         /// <param name="context">Http context must contain all necessary information.</param>
         /// <returns></returns>
-        ManageRatesResult Process(HttpContext context);
+        ManageRatesResult Process(HttpContext context, ManageRatesConfiguration policies = null);
     }
 }

@@ -10,11 +10,11 @@ namespace ManageRates.AspnetCore.Policies
     /// <summary>
     /// Implementations of <see cref="IHttpContextRatePolicy"/> wich policy resolver binded to specific <see cref="Endpoint"/>.
     /// </summary>
-    public class EnpointManageRatePolicy : IHttpContextRatePolicy
+    public class EndpointManageRatePolicy : IHttpContextRatePolicy
     {
         private readonly IManageRatePolicy _policy;
 
-        public EnpointManageRatePolicy(int count, RatesStrictPeriod period)
+        public EndpointManageRatePolicy(int count, RatesStrictPeriod period)
         {
             _policy = ManageRateBulder.BuildDefaultPolicy(period, count);
         }

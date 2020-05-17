@@ -1,4 +1,3 @@
-using ManageRates.AspnetCore;
 using ManageRates.AspnetCore.Builder;
 using ManageRates.Core;
 using ManageRates.Core.Model;
@@ -41,7 +40,13 @@ namespace WebApi
             app.UseRouting();
 
             // Attention! RateStrictions middleware should be places between UseRouting and UseEndpoints.
-            app.UseMiddleware<ManageRatesMiddleware>();
+            // app.UseManageRates();
+            app.UseManageRates(policyBuilder => policyBuilder
+                .AddManageRates("/raw/.*endpoint.*", 2, RatesStrictPeriod.Second)
+                .AddManageRatesByIp("/raw/.*ip.*", 2, RatesStrictPeriod.Second)
+                .AddManageRatesByUser("/raw/.*user.*", 2, RatesStrictPeriod.Second)
+                //.AddManageRatesByDelegate("", (httpContext, timeService) => new ManageRatesResult(false))
+            );
 
             app.UseEndpoints(endpoints =>
             {
@@ -55,7 +60,7 @@ namespace WebApi
                     .ManageRatesByIp(2, RatesStrictPeriod.Second);
 
                 endpoints.MapGet("/delegate", context => context.Response.WriteAsync("delegate"))
-                    .ManageRatesByDelegate((c, t) => new ManageRatesResult(false));
+                    .ManageRatesByDelegate((httpContext, timeService) => new ManageRatesResult(false));
 
                 endpoints.MapControllers();
             });

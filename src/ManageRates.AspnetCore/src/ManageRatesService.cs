@@ -1,7 +1,9 @@
 ﻿using ManageRates.AspnetCore.Abstractions;
+using ManageRates.AspnetCore.Configuration;
 using ManageRates.Core.Abstractions;
 using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 namespace ManageRates.AspnetCore
 {
@@ -19,7 +21,7 @@ namespace ManageRates.AspnetCore
         }
 
         /// <inheritdoc/>
-        public ManageRatesResult Process(HttpContext context)
+        public ManageRatesResult Process(HttpContext context, ManageRatesConfiguration policies = null)
         {
             var endpoint = context.GetEndpoint();
 
@@ -29,7 +31,12 @@ namespace ManageRates.AspnetCore
                 return policy.IsPermitted(context, _timeService);
             }
 
+            policy = policies?.Policies.FirstOrDefault(p => p.Accept(context));
+            if (policy != null)
+                return policy.IsPermitted(context, _timeService);
+
             return new ManageRatesResult(true);
         }
+
     }
 }

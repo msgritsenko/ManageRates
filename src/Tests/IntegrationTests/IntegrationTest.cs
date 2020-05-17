@@ -26,9 +26,9 @@ namespace Integration.Tests
                 .WithWebHostBuilder(builder =>
                 {
                     builder.ConfigureServices(services =>
-                   {
-                       services.AddSingleton<ITimeService>(_timeServiceMock.Object);
-                   });
+                    {
+                        services.AddSingleton<ITimeService>(_timeServiceMock.Object);
+                    });
                 });
         }
 
@@ -41,7 +41,7 @@ namespace Integration.Tests
             _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
             using var client = _factory.CreateClient();
 
-            var answers = new[]
+            var tests = new[]
             {
                 HttpStatusCode.OK,
                 HttpStatusCode.OK,
@@ -49,11 +49,11 @@ namespace Integration.Tests
                 HttpStatusCode.TooManyRequests
             };
 
-            foreach (var answer in answers)
+            foreach (var test in tests)
             {
-                var profile = await client.GetAsync(endpoint);
+                var response = await client.GetAsync(endpoint);
 
-                Assert.Equal(answer, profile.StatusCode);
+                Assert.Equal(test, response.StatusCode);
             }
 
             _timeServiceMock.Reset();
@@ -117,22 +117,23 @@ namespace Integration.Tests
             foreach (var ipV4 in ipV4Array)
                 foreach (var answer in answers)
                 {
-                    var okResponse = await server.SendAsync(context =>
+                    var response = await server.SendAsync(context =>
                     {
                         context.Request.Path = endpoint;
                         context.Request.Method = HttpMethods.Get;
                         context.Connection.RemoteIpAddress = ipV4;
                     });
 
-                    Assert.Equal(answer, okResponse.Response.StatusCode);
+                    Assert.Equal(answer, response.Response.StatusCode);
                 }
-         
+
             _timeServiceMock.Reset();
         }
 
         [Fact]
         public async Task TestBlockedByDelegate()
         {
+            _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
             using var client = _factory.CreateClient();
 
             for (int i = 0; i < 10; ++i)
@@ -140,6 +141,99 @@ namespace Integration.Tests
                 var response = await client.GetAsync("/delegate");
                 Assert.Equal(HttpStatusCode.TooManyRequests, response.StatusCode);
             }
+
+            _timeServiceMock.Reset();
+        }
+
+        [Fact]
+        public async Task TestTwoTimesPerSecondForUserStrictionRegexPolicy()
+        {
+            _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
+            var server = _factory.Server;
+
+            var tests = new[]
+            {
+                (code :StatusCodes.Status200OK, endpoint: "/api/raw/userfunction"),
+                (code :StatusCodes.Status200OK, endpoint: "/api/raw/functionUser"),
+                (code :StatusCodes.Status429TooManyRequests, endpoint: "/api/raw/userfunction"),
+                (code :StatusCodes.Status429TooManyRequests, endpoint: "/api/raw/functionUser")
+            };
+
+            var principal1 = new GenericPrincipal(new GenericIdentity("User1"), null);
+            var principal2 = new GenericPrincipal(new GenericIdentity("User2"), null);
+
+            var principals = new[] { principal1, principal2 };
+
+
+            foreach (var principal in principals)
+                foreach (var test in tests)
+                {
+                    var response = await server.SendAsync(context =>
+                    {
+                        context.Request.Path = test.endpoint;
+                        context.User = principal;
+                    });
+
+                    Assert.Equal(test.code, response.Response.StatusCode);
+                }
+
+            _timeServiceMock.Reset();
+        }
+
+        [Fact]
+        public async Task TestTwoTimesPerSecondForIpStrictionRegexPolicy()
+        {
+            _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
+            var server = _factory.Server;
+
+            var tests = new[]
+            {
+                (code : StatusCodes.Status200OK, endpoint: "/api/raw/ipfunction"),
+                (code : StatusCodes.Status200OK, endpoint: "/api/raw/functionip"),
+                (code : StatusCodes.Status429TooManyRequests, endpoint: "/api/raw/ipfunction"),
+                (code : StatusCodes.Status429TooManyRequests, endpoint: "/api/raw/functionip")
+            };
+
+            var ipV4Array = new[] { IPAddress.Parse("127.168.1.31"), IPAddress.Parse("127.168.1.32") };
+
+            foreach (var ipV4 in ipV4Array)
+                foreach (var test in tests)
+                {
+                    var response = await server.SendAsync(context =>
+                    {
+                        context.Request.Path = test.endpoint;
+                        context.Request.Method = HttpMethods.Get;
+                        context.Connection.RemoteIpAddress = ipV4;
+                    });
+
+                    Assert.Equal(test.code, response.Response.StatusCode);
+                }
+
+            _timeServiceMock.Reset();
+        }
+
+        [Fact]
+        public async Task TestTwoTimesPerSecondForEndpointStrictionRegexPolicy()
+        {
+            _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
+            using var client = _factory.CreateClient();
+
+            var tests = new[]
+            {
+                (code : HttpStatusCode.OK, endpoint: "/api/raw/endpointfunction"),
+                (code : HttpStatusCode.OK, endpoint: "/api/raw/functionendpoint"),
+                (code : HttpStatusCode.TooManyRequests, endpoint: "/api/raw/endpointfunction"),
+                (code : HttpStatusCode.TooManyRequests, endpoint: "/api/raw/functionendpoint")
+            };
+
+            foreach (var test in tests)
+            {
+                var response = await client.GetAsync(test.endpoint);
+
+                Assert.Equal(test.code, response.StatusCode);
+            }
+
+            _timeServiceMock.Reset();
         }
     }
 }
