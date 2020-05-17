@@ -36,7 +36,7 @@ namespace WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseRouting();
 
             // Attention! RateStrictions middleware should be places between UseRouting and UseEndpoints.

@@ -53,7 +53,7 @@ namespace ManageRates.AspnetCore.Tests
         }
 
         [Fact]
-        public async Task InvokeAsync_ManageRatesServiceReturnsTrue_ReturnsTaskFromNextRequest()
+        public void InvokeAsync_ManageRatesServiceReturnsTrue_ReturnsTaskFromNextRequest()
         {
             var manageRatesServiceMock = new Mock<IManageRatesService>();
             manageRatesServiceMock

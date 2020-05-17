@@ -20,7 +20,7 @@ namespace WebApi.Controllers
 
         [HttpGet]
         [UserManageRate(2, RatesStrictPeriod.Second)]
-        public string User()
+        public new string User()
         {
             return nameof(User);
         }
