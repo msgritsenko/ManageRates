@@ -1,4 +1,5 @@
 ﻿using ManageRates.Core.Abstractions;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 
 namespace ManageRates.Core.Policies
@@ -12,6 +13,6 @@ namespace ManageRates.Core.Policies
             _policy = policy;
         }
 
-        public bool IsPermitted(string key, ITimeService timeService) => _policy(key, timeService);
+        public bool IsPermitted(string key, ITimeService timeService, IMemoryCache memoryCache) => _policy(key, timeService);
     }
 }

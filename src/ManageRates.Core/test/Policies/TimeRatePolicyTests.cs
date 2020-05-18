@@ -8,6 +8,7 @@ namespace ManageRates.Core.Tests.Policies
 {
     public class TimeRatePolicyTests
     {
+        [Fact]
         public void IsPermitted_ConstantTime_ReturnsTrueFirstTimesForeachKey()
         {
             DateTime testTime = new DateTime(2020, 1, 1);
@@ -22,6 +23,7 @@ namespace ManageRates.Core.Tests.Policies
             Assert.False(policy.IsPermitted(timeServiceMock.Object));
         }
 
+        [Fact]
         public void IsPermitted_IncreasingTime_ReturnsTrueAlways()
         {
             DateTime testTime = new DateTime(2020, 1, 1);

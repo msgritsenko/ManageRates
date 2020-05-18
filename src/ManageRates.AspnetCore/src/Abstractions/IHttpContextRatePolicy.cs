@@ -1,6 +1,7 @@
 ﻿using ManageRates.Core.Abstractions;
 using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace ManageRates.AspnetCore.Abstractions
 {
@@ -12,9 +13,7 @@ namespace ManageRates.AspnetCore.Abstractions
         /// <summary>
         /// Decides by <paramref name="context"/> is the resource permitted.
         /// </summary>
-        /// <param name="context"></param>
-        /// <returns></returns>
-        public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService);
+        public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService, IMemoryCache memoryCache);
 
         /// <summary>
         /// Decides whether this policy acceptable to <paramref name="context"/>.

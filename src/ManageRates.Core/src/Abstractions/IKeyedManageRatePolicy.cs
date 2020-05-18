@@ -1,4 +1,6 @@
-﻿namespace ManageRates.Core.Abstractions
+﻿using Microsoft.Extensions.Caching.Memory;
+
+namespace ManageRates.Core.Abstractions
 {
     /// <summary>
     /// Represents an object which decides accessibility of a resource by key.
@@ -10,6 +12,6 @@
         /// </summary>
         /// <param name="key">Identificator of a resource.</param>
         /// <returns>Resource's availability.</returns>
-        bool IsPermitted(string key, ITimeService timeService);
+        bool IsPermitted(string key, ITimeService timeService, IMemoryCache memoryCache);
     }
 }

@@ -1,6 +1,6 @@
 ﻿using ManageRates.Core.Abstractions;
+using Microsoft.Extensions.Caching.Memory;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace ManageRates.Core.Policies
@@ -12,7 +12,6 @@ namespace ManageRates.Core.Policies
     {
         private readonly TimeSpan _ratePeriod;
         private readonly int _rateCount;
-        private readonly ConcurrentDictionary<string, Queue<DateTime>> _timeStorage;
 
         /// <summary>
         /// Creates a new <see cref="KeyedTimeRatePolicy"/> with specified <paramref name="rateCount"/> in <paramref name="ratePeriod"/> period.
@@ -21,28 +20,33 @@ namespace ManageRates.Core.Policies
         /// <param name="rateCount"></param>
         /// <param name="timeService"></param>
         public KeyedTimeRatePolicy(
-            TimeSpan ratePeriod, 
+            TimeSpan ratePeriod,
             int rateCount)
         {
             _ratePeriod = ratePeriod;
             _rateCount = rateCount;
-            _timeStorage = new ConcurrentDictionary<string, Queue<DateTime>>();
         }
 
         /// <inheritdoc/>
-        public bool IsPermitted(string key, ITimeService timeService)
+        public bool IsPermitted(string key, ITimeService timeService, IMemoryCache memoryCache)
         {
-            var timeQueue = _timeStorage.GetOrAdd(key, key => new Queue<DateTime>(_rateCount));
+            var timeQueue = memoryCache.GetOrCreate(key, cacheEntry =>
+            {
+                cacheEntry.SlidingExpiration = _ratePeriod;
+                return new Queue<DateTime>(_rateCount);
+            });
 
             lock (timeQueue)
             {
                 var currentTime = timeService.GetUTC();
 
-                if (timeQueue.Count > 0)
+                while (timeQueue.Count > 0)
                 {
                     var lstTiime = timeQueue.Peek();
                     if ((currentTime - lstTiime) > _ratePeriod)
                         timeQueue.Dequeue();
+                    else
+                        break;
                 }
 
                 if (timeQueue.Count < _rateCount)

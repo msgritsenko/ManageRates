@@ -3,6 +3,7 @@ using ManageRates.Core;
 using ManageRates.Core.Abstractions;
 using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 
 namespace ManageRates.AspnetCore.Policies
@@ -26,10 +27,10 @@ namespace ManageRates.AspnetCore.Policies
         }
 
         /// <inheritdoc/>
-        public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService)
+        public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService, IMemoryCache memoryCache)
         {
             string ip = context.Connection.RemoteIpAddress.ToString();
-            var permitted = _policy.IsPermitted(ip, timeService);
+            var permitted = _policy.IsPermitted(ip, timeService, memoryCache);
 
             return new ManageRatesResult(permitted);
         }
