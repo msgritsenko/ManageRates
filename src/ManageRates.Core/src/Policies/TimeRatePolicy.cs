@@ -36,11 +36,13 @@ namespace ManageRates.Core.Policies
             {
                 var currentTime = timeService.GetUTC();
 
-                if (timeQueue.Count > 0)
+                while (timeQueue.Count > 0)
                 {
                     var lstTiime = timeQueue.Peek();
                     if ((currentTime - lstTiime) > _ratePeriod)
                         timeQueue.Dequeue();
+                    else
+                        break;
                 }
 
                 if (timeQueue.Count < _rateCount)

@@ -3,6 +3,8 @@ using ManageRates.AspnetCore.Configuration;
 using ManageRates.Core.Abstractions;
 using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
+using System;
 using System.Linq;
 
 namespace ManageRates.AspnetCore
@@ -11,13 +13,15 @@ namespace ManageRates.AspnetCore
     public class ManageRatesService : IManageRatesService
     {
         private readonly ITimeService _timeService;
+        private readonly IMemoryCache _memoryCache;
 
         /// <summary>
         /// Creates new instance <see cref="ManageRatesService"/>.
         /// </summary>
-        public ManageRatesService(ITimeService timeService)
+        public ManageRatesService(ITimeService timeService, IMemoryCache memoryCache)
         {
-            _timeService = timeService;
+            _timeService = timeService ?? throw new ArgumentNullException(nameof(timeService));
+            _memoryCache = memoryCache ?? throw new ArgumentNullException(nameof(memoryCache));
         }
 
         /// <inheritdoc/>
@@ -28,12 +32,12 @@ namespace ManageRates.AspnetCore
             var policy = endpoint?.Metadata.GetMetadata<IHttpContextRatePolicy>();
             if (policy != null)
             {
-                return policy.IsPermitted(context, _timeService);
+                return policy.IsPermitted(context, _timeService, _memoryCache);
             }
 
             policy = policies?.Policies.FirstOrDefault(p => p.Accept(context));
             if (policy != null)
-                return policy.IsPermitted(context, _timeService);
+                return policy.IsPermitted(context, _timeService, _memoryCache);
 
             return new ManageRatesResult(true);
         }

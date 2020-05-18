@@ -2,6 +2,7 @@
 using ManageRates.Core.Abstractions;
 using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
 using System.Text.RegularExpressions;
 
 namespace ManageRates.AspnetCore.Policies
@@ -12,7 +13,7 @@ namespace ManageRates.AspnetCore.Policies
         private readonly IHttpContextRatePolicy _innerPolicy;
 
         public RegexManageRatePolicyDecorator(string pattern, IHttpContextRatePolicy innerPolicy)
-            : this(pattern, RegexOptions.IgnoreCase, innerPolicy)
+            : this(pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled, innerPolicy)
         {
         }
 
@@ -27,9 +28,9 @@ namespace ManageRates.AspnetCore.Policies
             return _regex.IsMatch(context.Request.Path);
         }
 
-        public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService)
+        public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService, IMemoryCache memoryCache)
         {
-            return _innerPolicy.IsPermitted(context, timeService);
+            return _innerPolicy.IsPermitted(context, timeService, memoryCache);
         }
     }
 }

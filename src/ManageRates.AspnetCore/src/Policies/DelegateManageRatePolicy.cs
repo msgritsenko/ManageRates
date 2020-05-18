@@ -2,6 +2,7 @@
 using ManageRates.Core.Abstractions;
 using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 
 namespace ManageRates.AspnetCore.Policies
@@ -25,7 +26,7 @@ namespace ManageRates.AspnetCore.Policies
         }
 
         /// <inheritdoc/>
-        public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService)
+        public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService, IMemoryCache memoryCache)
         {
             return _policy(context, timeService);
         }
