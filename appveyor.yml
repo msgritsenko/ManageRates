@@ -14,7 +14,7 @@ build_script:
   - git clean -ffxd
   - dotnet restore ./src
   - dotnet build ./src -c Release --no-restore
-  - dotnet test ./src -c Release --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput='../../../artifacts/'
+  - dotnet test ./src -c Release --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput='../../../artifacts/' --filter Category\!=LongRunning
   - dotnet pack ./src -c Release --no-build --include-symbols -o ./artifacts /p:VersionPrefix=$APPVEYOR_BUILD_VERSION
   - bash <(curl -s https://codecov.io/bash)
 

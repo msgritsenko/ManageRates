@@ -84,13 +84,13 @@ namespace Integration.Tests
             foreach (var principal in principals)
                 foreach (var answer in answers)
                 {
-                    var okResponse = await server.SendAsync(context =>
+                    var response = await server.SendAsync(context =>
                     {
                         context.Request.Path = endpoint;
                         context.User = principal;
                     });
 
-                    Assert.Equal(answer, okResponse.Response.StatusCode);
+                    Assert.Equal(answer, response.Response.StatusCode);
                 }
 
             _timeServiceMock.Reset();
