@@ -12,10 +12,10 @@ namespace Load.Tests
 {
 
     /// <summary>
-    /// Checks if there is memory leak with <see cref="LoadTest.QUERY_COUNT"/> queries and <see cref="LoadTest.THREAD_COUNT"/>.
-    /// Memory limit is <see cref="LoadTest.MEMORY_LIMIT"/>.
+    /// Checks if there is memory leak with <see cref="MemoryLeakTest.QUERY_COUNT"/> queries and <see cref="MemoryLeakTest.THREAD_COUNT"/>.
+    /// Memory limit is <see cref="MemoryLeakTest.MEMORY_LIMIT"/>.
     /// </summary>
-    public class LoadTest : IClassFixture<WebApplicationFactory<WebApi.Startup>>
+    public class MemoryLeakTest : IClassFixture<WebApplicationFactory<WebApi.Startup>>
     {
         public const int QUERY_COUNT = 100_000_000;
         public const int THREAD_COUNT = 10;
@@ -28,7 +28,7 @@ namespace Load.Tests
 
         private readonly IReadOnlyDictionary<string, testDelegate> _testEndpoints;
 
-        public LoadTest(WebApplicationFactory<WebApi.Startup> factory)
+        public MemoryLeakTest(WebApplicationFactory<WebApi.Startup> factory)
         {
             _factory = factory
                 .WithWebHostBuilder(builder =>
