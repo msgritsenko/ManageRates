@@ -18,34 +18,34 @@ namespace ManageRates.AspnetCore.Configuration
             _policies = new List<IHttpContextRatePolicy>();
         }
 
-        public ManageRatesConfigurationBuilder AddManageRates(string patter, int count, RatesStrictPeriod period)
+        public ManageRatesConfigurationBuilder AddManageRates(string pattern, int count, RatesStrictPeriod period)
         {
             var innerPolicy = new EndpointManageRatePolicy(count, period);
-            _policies.Add(new RegexManageRatePolicyDecorator(patter, innerPolicy));
+            _policies.Add(new RegexManageRatePolicyDecorator(pattern, innerPolicy));
 
             return this;
         }
 
-        public ManageRatesConfigurationBuilder AddManageRatesByIp(string patter, int count, RatesStrictPeriod period)
+        public ManageRatesConfigurationBuilder AddManageRatesByIp(string pattern, int count, RatesStrictPeriod period)
         {
             var innerPolicy = new IpManageRatePolicy(count, period);
-            _policies.Add(new RegexManageRatePolicyDecorator(patter, innerPolicy));
+            _policies.Add(new RegexManageRatePolicyDecorator(pattern, innerPolicy));
 
             return this;
         }
 
-        public ManageRatesConfigurationBuilder AddManageRatesByUser(string patter, int count, RatesStrictPeriod period)
+        public ManageRatesConfigurationBuilder AddManageRatesByUser(string pattern, int count, RatesStrictPeriod period)
         {
             var innerPolicy = new UserManageRatePolicy(count, period);
-            _policies.Add(new RegexManageRatePolicyDecorator(patter, innerPolicy));
+            _policies.Add(new RegexManageRatePolicyDecorator(pattern, innerPolicy));
 
             return this;
         }
 
-        public ManageRatesConfigurationBuilder AddManageRatesByDelegate(string patter, Func<HttpContext, ITimeService, ManageRatesResult> policy)
+        public ManageRatesConfigurationBuilder AddManageRatesByDelegate(string pattern, Func<HttpContext, ITimeService, ManageRatesResult> policy)
         {
             var innerPolicy = new DelegateManageRatePolicy(policy);
-            _policies.Add(new RegexManageRatePolicyDecorator(patter, innerPolicy));
+            _policies.Add(new RegexManageRatePolicyDecorator(pattern, innerPolicy));
 
             return this;
         }

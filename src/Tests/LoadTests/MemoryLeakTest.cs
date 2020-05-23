@@ -11,8 +11,16 @@ using Xunit;
 namespace Load.Tests
 {
 
-    public class LoadTest : IClassFixture<WebApplicationFactory<WebApi.Startup>>
+    /// <summary>
+    /// Checks if there is memory leak with <see cref="MemoryLeakTest.QUERY_COUNT"/> queries and <see cref="MemoryLeakTest.THREAD_COUNT"/>.
+    /// Memory limit is <see cref="MemoryLeakTest.MEMORY_LIMIT"/>.
+    /// </summary>
+    public class MemoryLeakTest : IClassFixture<WebApplicationFactory<WebApi.Startup>>
     {
+        public const int QUERY_COUNT = 100_000_000;
+        public const int THREAD_COUNT = 10;
+        public const int MEMORY_LIMIT = 300 * 1024 * 1024;
+
         delegate Task<int> testDelegate(string endpoint);
 
         private readonly WebApplicationFactory<WebApi.Startup> _factory;
@@ -20,7 +28,7 @@ namespace Load.Tests
 
         private readonly IReadOnlyDictionary<string, testDelegate> _testEndpoints;
 
-        public LoadTest(WebApplicationFactory<WebApi.Startup> factory)
+        public MemoryLeakTest(WebApplicationFactory<WebApi.Startup> factory)
         {
             _factory = factory
                 .WithWebHostBuilder(builder =>
@@ -51,15 +59,15 @@ namespace Load.Tests
             int maxIndex = endpoints.Count;
             var options = new ParallelOptions()
             {
-                MaxDegreeOfParallelism = 10
+                MaxDegreeOfParallelism = THREAD_COUNT
             };
 
-            Parallel.For(1, 100_000_000, options, i =>
+            Parallel.For(1, QUERY_COUNT, options, i =>
             {
                 if (i % 10 == 0)
                 {
                     var memory = GC.GetTotalMemory(false);
-                    Assert.True(memory < 300 * 1024 * 1024);
+                    Assert.True(memory < MEMORY_LIMIT);
                 }
 
                 int index = _random.Next(maxIndex);

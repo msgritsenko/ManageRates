@@ -13,8 +13,7 @@ Manage rates
 
 ManageRates is an open-source and cross-platform framework for managing throttling from asp.net core applications. In simple case it is an alternative project to [AspNetCoreRateLimit](https://github.com/stefanprodan/AspNetCoreRateLimit). 
 
-![test](src/Tests/BenchmarkTest/BenchmarkDotNet.Artifacts/results/Benchmark.Test.SingleVsFirst-report-github.md)
-
+[!include[test](../../src/Tests/BenchmarkTest/BenchmarkDotNet.Artifacts/results/Benchmark.Test.SingleVsFirst-report-github.md)]
 
 ## Installation
 
@@ -26,8 +25,10 @@ PM> Install-Package ManageRates.AspnetCore
 
 ## Samples
 
-:::code language="csharp" source="./src/Tests/LoadTests/MemoryLeakTest.cs" :::
+[!code-csharp[Main](../../samples/WebApi/Startup.cs?range=22-30&highlight=8)]
 
 ## License
 
 ManageRates.AspnetCore licensed under the [MIT License](https://raw.githubusercontent.com/msgritsenko/ManageRates/master/LICENSE).
+
+
