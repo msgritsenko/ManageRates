@@ -1,0 +1,20 @@
+###############
+#    folder   #
+###############
+/**/DROP/
+/**/TEMP/
+/**/packages/
+/**/bin/
+/**/csx/
+/**/obj/
+/**/xdocoutput/
+/**/node_modules/
+/**/*.sln.ide/
+/TestResults/
+/.vs/
+.NuGet/
+artifacts/
+target/
+/**/_site/
+.vscode/
+.vs/
