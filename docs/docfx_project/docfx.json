@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "files": [ "**/*.sln"],
+          "files": [ "**/ManageRates.AspnetCore.csproj", "**/ManageRates.Core.csproj"],
           "exclude": [ "**/bin/**", "**/obj/**" ],
           "src": "../../src"
         }
