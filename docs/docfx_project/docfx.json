@@ -3,8 +3,14 @@
     {
       "src": [
         {
-          "files": [ "**/ManageRates.AspnetCore.csproj", "**/ManageRates.Core.csproj"],
-          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "files": [
+            "**/ManageRates.AspnetCore.csproj",
+            "**/ManageRates.Core.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**"
+          ],
           "src": "../../src"
         }
       ],
@@ -14,17 +20,26 @@
   "build": {
     "content": [
       {
-        "files": [ "**/*.yml" ],
+        "files": [
+          "**/*.yml"
+        ],
         "src": "obj/api",
         "dest": "api"
       },
       {
-        "files": [ "articles/**/*.md", "*.md", "toc.yml", "restapi/**" ]
+        "files": [
+          "articles/**/*.md",
+          "*.md",
+          "toc.yml",
+          "restapi/**"
+        ]
       }
     ],
     "resource": [
       {
-        "files": [ "articles/images/**"]
+        "files": [
+          "articles/images/**"
+        ]
       }
     ],
     "overwrite": "specs/*.md",
