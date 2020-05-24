@@ -25,7 +25,7 @@ namespace ManageRates.Core.Tests.Policies
             memoryCacheMock.Setup(m => m.TryGetValue(It.IsIn("2"), out queue2)).Returns(true);
 
             // Act
-            var policy = new KeyedTimeRatePolicy(TimeSpan.FromSeconds(1), 2);
+            var policy = new KeyedTimeRatePolicy(2, TimeSpan.FromSeconds(1));
 
             // Assert
             Assert.True(policy.IsPermitted("1", timeServiceMock.Object, memoryCacheMock.Object));
@@ -51,7 +51,7 @@ namespace ManageRates.Core.Tests.Policies
             memoryCacheMock.Setup(m => m.TryGetValue(It.IsIn("1"), out queue1)).Returns(true);
 
             // Act
-            var policy = new KeyedTimeRatePolicy(TimeSpan.FromSeconds(1), 2);
+            var policy = new KeyedTimeRatePolicy(2, TimeSpan.FromSeconds(1));
 
             // Assert
             Assert.True(policy.IsPermitted("1", timeServiceMock.Object, memoryCacheMock.Object));

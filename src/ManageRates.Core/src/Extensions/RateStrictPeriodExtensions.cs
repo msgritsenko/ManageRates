@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageRates.Core.Model;
+using System;
 
 namespace ManageRates.Core.Extensions
 {

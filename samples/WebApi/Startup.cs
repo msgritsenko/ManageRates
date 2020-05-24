@@ -1,5 +1,5 @@
+using ManageRates.AspnetCore;
 using ManageRates.AspnetCore.Builder;
-using ManageRates.Core;
 using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -56,16 +56,16 @@ namespace WebApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/endpoint", context => context.Response.WriteAsync("endpoint"))
-                    .ManageRates(2, RatesStrictPeriod.Second);
+                    .ManageRates(2, RatesStrictPeriod.Second, RatesStricType.Endpoint);
 
                 endpoints.MapGet("/user", context => context.Response.WriteAsync("user"))
-                    .ManageRatesByUser(2, RatesStrictPeriod.Second);
+                    .ManageRates(2, RatesStrictPeriod.Second, RatesStricType.User);
 
                 endpoints.MapGet("/ip", context => context.Response.WriteAsync("ip"))
-                    .ManageRatesByIp(2, RatesStrictPeriod.Second);
+                    .ManageRates(2, RatesStrictPeriod.Second, RatesStricType.Ip);
 
                 endpoints.MapGet("/delegate", context => context.Response.WriteAsync("delegate"))
-                    .ManageRatesByDelegate((httpContext, timeService) => new ManageRatesResult(false));
+                    .ManageRates((httpContext, timeService, memoryCache) => new ManageRatesResult(false));
 
                 endpoints.MapControllers();
             });

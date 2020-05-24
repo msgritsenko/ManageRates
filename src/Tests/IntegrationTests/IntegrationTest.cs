@@ -27,7 +27,7 @@ namespace Integration.Tests
                 {
                     builder.ConfigureServices(services =>
                     {
-                        services.AddSingleton<ITimeService>(_timeServiceMock.Object);
+                        services.AddSingleton(_timeServiceMock.Object);
                     });
                 });
         }

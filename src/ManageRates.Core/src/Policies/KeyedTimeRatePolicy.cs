@@ -16,12 +16,11 @@ namespace ManageRates.Core.Policies
         /// <summary>
         /// Creates a new <see cref="KeyedTimeRatePolicy"/> with specified <paramref name="rateCount"/> in <paramref name="ratePeriod"/> period.
         /// </summary>
-        /// <param name="ratePeriod"></param>
         /// <param name="rateCount"></param>
-        /// <param name="timeService"></param>
+        /// <param name="ratePeriod"></param>
         public KeyedTimeRatePolicy(
-            TimeSpan ratePeriod,
-            int rateCount)
+            int rateCount,
+            TimeSpan ratePeriod)
         {
             _ratePeriod = ratePeriod;
             _rateCount = rateCount;

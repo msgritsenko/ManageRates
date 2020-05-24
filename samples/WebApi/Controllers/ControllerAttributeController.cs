@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using ManageRates.Core;
+using ManageRates.AspnetCore;
+using ManageRates.Core.Model;
 
 namespace WebApi.Controllers
 {
@@ -8,7 +9,7 @@ namespace WebApi.Controllers
     /// </summary>
     [ApiController]
     [Route("[controller]")]
-    [EndpointManageRate(2, RatesStrictPeriod.Second)]
+    [ManageRate(2, RatesStrictPeriod.Second, RatesStricType.Endpoint)]
     public class ControllerAttributeController : ControllerBase
     {
 

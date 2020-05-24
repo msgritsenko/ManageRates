@@ -1,51 +1,48 @@
 ﻿using ManageRates.AspnetCore.Abstractions;
-using ManageRates.AspnetCore.Policies;
-using ManageRates.Core;
-using ManageRates.Core.Abstractions;
 using ManageRates.Core.Model;
-using Microsoft.AspNetCore.Http;
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using static ManageRates.AspnetCore.HttpManageRatePolicy;
 
 namespace ManageRates.AspnetCore.Configuration
 {
     public class ManageRatesConfigurationBuilder
     {
-        private readonly List<IHttpContextRatePolicy> _policies;
+        private readonly List<IHttpManageRatePolicy> _policies;
         public ManageRatesConfigurationBuilder()
         {
-            _policies = new List<IHttpContextRatePolicy>();
+            _policies = new List<IHttpManageRatePolicy>();
         }
 
         public ManageRatesConfigurationBuilder AddManageRates(string pattern, int count, RatesStrictPeriod period)
         {
-            var innerPolicy = new EndpointManageRatePolicy(count, period);
-            _policies.Add(new RegexManageRatePolicyDecorator(pattern, innerPolicy));
+            var policy = HttpManageRatePolicyBuilder.Build(pattern, count, period, RatesStricType.None);
+            _policies.Add(policy);
 
             return this;
         }
 
         public ManageRatesConfigurationBuilder AddManageRatesByIp(string pattern, int count, RatesStrictPeriod period)
         {
-            var innerPolicy = new IpManageRatePolicy(count, period);
-            _policies.Add(new RegexManageRatePolicyDecorator(pattern, innerPolicy));
+            var policy = HttpManageRatePolicyBuilder.Build(pattern, count, period, RatesStricType.Ip);
+            _policies.Add(policy);
 
             return this;
         }
 
         public ManageRatesConfigurationBuilder AddManageRatesByUser(string pattern, int count, RatesStrictPeriod period)
         {
-            var innerPolicy = new UserManageRatePolicy(count, period);
-            _policies.Add(new RegexManageRatePolicyDecorator(pattern, innerPolicy));
+            var policy = HttpManageRatePolicyBuilder.Build(pattern, count, period, RatesStricType.User);
+            _policies.Add(policy);
 
             return this;
         }
 
-        public ManageRatesConfigurationBuilder AddManageRatesByDelegate(string pattern, Func<HttpContext, ITimeService, ManageRatesResult> policy)
+        public ManageRatesConfigurationBuilder AddManageRatesByDelegate(string pattern, PolicyDelegate policyDelegate)
         {
-            var innerPolicy = new DelegateManageRatePolicy(policy);
-            _policies.Add(new RegexManageRatePolicyDecorator(pattern, innerPolicy));
+            var policy = HttpManageRatePolicyBuilder.Build(pattern, policyDelegate);
+
+            _policies.Add(policy);
 
             return this;
         }

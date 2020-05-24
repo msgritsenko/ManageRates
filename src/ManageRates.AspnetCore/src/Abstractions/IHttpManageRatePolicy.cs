@@ -8,18 +8,18 @@ namespace ManageRates.AspnetCore.Abstractions
     /// <summary>
     /// The main interface for all rate management aspnet components.
     /// </summary>
-    public interface IHttpContextRatePolicy
+    public interface IHttpManageRatePolicy
     {
+        /// <summary>
+        /// Decides whether this policy acceptable to <paramref name="context"/>.
+        /// </summary>
+        /// <param name="context">Request httpcontext.</param>
+        /// <returns></returns>
+        public bool Accept(HttpContext context);
+
         /// <summary>
         /// Decides by <paramref name="context"/> is the resource permitted.
         /// </summary>
         public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService, IMemoryCache memoryCache);
-
-        /// <summary>
-        /// Decides whether this policy acceptable to <paramref name="context"/>.
-        /// </summary>
-        /// <param name="context"></param>
-        /// <returns></returns>
-        public bool Accept(HttpContext context);
     }
 }

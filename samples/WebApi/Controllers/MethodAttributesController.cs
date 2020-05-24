@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ManageRates.Core;
+using ManageRates.AspnetCore;
+using ManageRates.Core.Model;
 
 namespace WebApi.Controllers
 {
@@ -12,7 +13,7 @@ namespace WebApi.Controllers
     {
         // <endpoint_attribute_sample>
         [HttpGet]
-        [EndpointManageRate(2, RatesStrictPeriod.Second)]
+        [ManageRate(2, RatesStrictPeriod.Second, RatesStricType.Endpoint)]
         public string Endpoint()
         {
             return nameof(Endpoint);
@@ -20,14 +21,14 @@ namespace WebApi.Controllers
         // </endpoint_attribute_sample>
 
         [HttpGet]
-        [UserManageRate(2, RatesStrictPeriod.Second)]
+        [ManageRate(2, RatesStrictPeriod.Second, RatesStricType.User)]
         public new string User()
         {
             return nameof(User);
         }
 
         [HttpGet]
-        [IpManageRate(2, RatesStrictPeriod.Second)]
+        [ManageRate(2, RatesStrictPeriod.Second, RatesStricType.Ip)]
         public string Ip()
         {
             return nameof(Ip);

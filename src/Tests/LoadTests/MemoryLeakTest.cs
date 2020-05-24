@@ -12,8 +12,8 @@ namespace Load.Tests
 {
 
     /// <summary>
-    /// Checks if there is memory leak with <see cref="MemoryLeakTest.QUERY_COUNT"/> queries and <see cref="MemoryLeakTest.THREAD_COUNT"/>.
-    /// Memory limit is <see cref="MemoryLeakTest.MEMORY_LIMIT"/>.
+    /// Checks if there is memory leak with <see cref="QUERY_COUNT"/> queries and <see cref="THREAD_COUNT"/>.
+    /// Memory limit is <see cref="MEMORY_LIMIT"/>.
     /// </summary>
     public class MemoryLeakTest : IClassFixture<WebApplicationFactory<WebApi.Startup>>
     {

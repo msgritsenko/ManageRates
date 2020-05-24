@@ -1,31 +1,27 @@
 ﻿using ManageRates.AspnetCore.Abstractions;
-using ManageRates.AspnetCore.Policies;
 using ManageRates.Core.Abstractions;
 using ManageRates.Core.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
 using System;
 
-namespace ManageRates.Core
+namespace ManageRates.AspnetCore.Infrastructure
 {
     /// <summary>
     /// Special User rate striction attribute.
     /// </summary>
     /// <remarks>Just only as a short version of <see cref="EndpointManageRateAttribute"/>.</remarks>
-    public class UserManageRateAttribute : Attribute, IHttpContextRatePolicy
+    public class ManageRateAttribute : Attribute, IHttpManageRatePolicy
     {
-        private readonly UserManageRatePolicy _policy;
+        private readonly IHttpManageRatePolicy _policy;
 
-        public UserManageRateAttribute(int count, RatesStrictPeriod period)
+        public ManageRateAttribute(int count, RatesStrictPeriod period, RatesStricType strictType)
         {
-            _policy = new UserManageRatePolicy(count, period);
+            _policy = HttpManageRatePolicyBuilder.Build(count, period, strictType);
         }
 
         /// <inheritdoc/>
-        public bool Accept(HttpContext context)
-        {
-            throw new NotImplementedException();
-        }
+        public bool Accept(HttpContext context) => _policy.Accept(context);
 
         /// <inheritdoc/>
         public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService, IMemoryCache memoryCache)

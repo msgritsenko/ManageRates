@@ -5,6 +5,6 @@ namespace ManageRates.AspnetCore.Configuration
 {
     public class ManageRatesConfiguration
     {
-        public IReadOnlyList<IHttpContextRatePolicy> Policies { get; set; }
+        public IReadOnlyList<IHttpManageRatePolicy> Policies { get; set; }
     }
 }

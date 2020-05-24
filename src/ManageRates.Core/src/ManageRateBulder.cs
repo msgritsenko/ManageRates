@@ -1,5 +1,6 @@
 ﻿using ManageRates.Core.Abstractions;
 using ManageRates.Core.Extensions;
+using ManageRates.Core.Model;
 using ManageRates.Core.Policies;
 using System;
 
@@ -13,23 +14,23 @@ namespace ManageRates.Core
         /// <summary>
         /// Builds <see cref="IKeyedManageRatePolicy"/> with <see cref="KeyedTimeRatePolicy"/> as most common type.
         /// </summary>
-        /// <param name="ratePeriod">Rate striction period.</param>
         /// <param name="rateCount">Max rate in strict period.</param>
+        /// <param name="ratePeriod">Rate striction period.</param>
         /// <returns></returns>
-        public static IKeyedManageRatePolicy BuildKeyedDefaultPolicy(TimeSpan ratePeriod, int rateCount)
+        public static IKeyedManageRatePolicy BuildKeyedDefaultPolicy(int rateCount, TimeSpan ratePeriod)
         {
-            return new KeyedTimeRatePolicy(ratePeriod, rateCount);
+            return new KeyedTimeRatePolicy(rateCount, ratePeriod);
         }
 
         /// <summary>
         /// Builds <see cref="IKeyedManageRatePolicy"/> with <see cref="KeyedTimeRatePolicy"/> as most common type.
         /// </summary>
-        /// <param name="ratePeriod">Predefined striction type period.</param>
         /// <param name="rateCount">Max rate in strict period.</param>
+        /// <param name="ratePeriod">Predefined striction type period.</param>
         /// <returns></returns>
-        public static IKeyedManageRatePolicy BuildKeyedDefaultPolicy(RatesStrictPeriod ratePeriod, int rateCount)
+        public static IKeyedManageRatePolicy BuildKeyedDefaultPolicy(int rateCount, RatesStrictPeriod ratePeriod)
         {
-            return BuildKeyedDefaultPolicy(ratePeriod.ToTimeSpan(), rateCount);
+            return BuildKeyedDefaultPolicy(rateCount, ratePeriod.ToTimeSpan());
         }
 
         /// <summary>

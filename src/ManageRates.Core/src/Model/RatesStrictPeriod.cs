@@ -1,4 +1,4 @@
-﻿namespace ManageRates.Core
+﻿namespace ManageRates.Core.Model
 {
     /// <summary>
     /// Supported restrict periods.

@@ -25,7 +25,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
             policyBuilder(manageRatesPolicyBuilder);
             ManageRatesConfiguration policies = manageRatesPolicyBuilder.Build();
-            var options = Microsoft.Extensions.Options.Options.Create(policies);
+            var options = Options.Options.Create(policies);
 
             app.UseMiddleware<ManageRatesMiddleware>(options);
             return app;
