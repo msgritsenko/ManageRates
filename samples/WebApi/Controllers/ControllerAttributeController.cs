@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ManageRates.AspnetCore;
 using ManageRates.Core.Model;
+using ManageRates.AspnetCore.Infrastructure;
 
 namespace WebApi.Controllers
 {
