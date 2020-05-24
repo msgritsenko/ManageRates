@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace ManageRates.AspnetCore.Policies
+    <title>Delegate HttpManageRatePolicy.PolicyDelegate
    | docfx seed website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace ManageRates.AspnetCore.Policies
+    <meta name="title" content="Delegate HttpManageRatePolicy.PolicyDelegate
    | docfx seed website ">
     <meta name="generator" content="docfx 2.53.1.0">
     
@@ -78,26 +78,61 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ManageRates.AspnetCore.Policies">
+            <article class="content wrap" id="_content" data-uid="ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate">
   
-  <h1 id="ManageRates_AspnetCore_Policies" data-uid="ManageRates.AspnetCore.Policies" class="text-break">Namespace ManageRates.AspnetCore.Policies
+  
+  <h1 id="ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate" data-uid="ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate" class="text-break">Delegate HttpManageRatePolicy.PolicyDelegate
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="ManageRates.AspnetCore.Policies.DelegateManageRatePolicy.html">DelegateManageRatePolicy</a></h4>
-      <section><p>Implementations of <a class="xref" href="ManageRates.AspnetCore.Abstractions.IHttpContextRatePolicy.html">IHttpContextRatePolicy</a> with delegate policy resolver.</p>
-</section>
-      <h4><a class="xref" href="ManageRates.AspnetCore.Policies.EndpointManageRatePolicy.html">EndpointManageRatePolicy</a></h4>
-      <section><p>Implementations of <a class="xref" href="ManageRates.AspnetCore.Abstractions.IHttpContextRatePolicy.html">IHttpContextRatePolicy</a> wich policy resolver binded to specific <see cref="!:Endpoint"></see>.</p>
-</section>
-      <h4><a class="xref" href="ManageRates.AspnetCore.Policies.IpManageRatePolicy.html">IpManageRatePolicy</a></h4>
-      <section><p>Implementations of <a class="xref" href="ManageRates.AspnetCore.Abstractions.IHttpContextRatePolicy.html">IHttpContextRatePolicy</a> with IP-binded polocy resolver.</p>
-</section>
-      <h4><a class="xref" href="ManageRates.AspnetCore.Policies.RegexManageRatePolicyDecorator.html">RegexManageRatePolicyDecorator</a></h4>
-      <section></section>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ManageRates.AspnetCore.html">ManageRates.AspnetCore</a></h6>
+  <h6><strong>Assembly</strong>: ManageRates.AspnetCore.dll</h6>
+  <h5 id="ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate ManageRatesResult PolicyDelegate(HttpContext httpContext, ITimeService timeService, IMemoryCache memoryCache);</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Http.HttpContext</span></td>
+        <td><span class="parametername">httpContext</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ManageRates.Core.Abstractions.ITimeService.html">ITimeService</a></td>
+        <td><span class="parametername">timeService</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Caching.Memory.IMemoryCache</span></td>
+        <td><span class="parametername">memoryCache</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ManageRates.Core.Model.ManageRatesResult.html">ManageRatesResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -105,6 +140,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/HttpManageRatePolicy.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

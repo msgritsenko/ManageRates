@@ -25,15 +25,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "uAtFKMYDeSgOEMtjsXy3cw=="
+          "hash": "uzTuhhNzKCd1DaGk/F3ynw=="
         }
       },
       "is_incremental": false,
@@ -41,11 +38,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.AspnetCore.Abstractions.IHttpContextRatePolicy.yml",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ManageRates.AspnetCore.Abstractions.IHttpContextRatePolicy.html",
-          "hash": "XT5sce0WgDcGZyrgGbJobA=="
+          "relative_path": "api/ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.html",
+          "hash": "LR4zpNA2CkIEYwj5jIB4JQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Abstractions.IManageRatesService.html",
-          "hash": "AfJ8tKhXX34PXgWX7anLWA=="
+          "hash": "3dEBWJQhJDyOurJF1nyHDA=="
         }
       },
       "is_incremental": false,
@@ -69,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Abstractions.html",
-          "hash": "zL6DULks3IVj7RJUDhFtCQ=="
+          "hash": "NO6UyVG4bdP9LKufJEK9QA=="
         }
       },
       "is_incremental": false,
@@ -81,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.html",
-          "hash": "xDXDYIyJ7lZTlpfjGTuWNw=="
+          "hash": "6nCbK8elgfj9M4t+PZaLqg=="
         }
       },
       "is_incremental": false,
@@ -105,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Configuration.ManageRatesConfiguration.html",
-          "hash": "fM4rKDH1am0KsZyIVQ1LgA=="
+          "hash": "5sa/+F3Hcxt1UgRTe85oqg=="
         }
       },
       "is_incremental": false,
@@ -117,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html",
-          "hash": "sPHvIADk9+ysXBJwpmLisQ=="
+          "hash": "cGCQzbZqgoIqNN5g8rjA1Q=="
         }
       },
       "is_incremental": false,
@@ -137,11 +134,83 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.HttpManageRatePolicy.AcceptDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.AcceptDelegate.html",
+          "hash": "wZw/xFWHxYCKOdJS2MQaUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate.html",
+          "hash": "upkChbQbt3dYs/mWAjfkgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.HttpManageRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.html",
+          "hash": "3HM/sv0I4qGe3FOsyohkXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html",
+          "hash": "Sv2lTO4XzsCD3eZwmCFfrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html",
+          "hash": "0WSbnvtQXsUAyheQ530kkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Infrastructure.html",
+          "hash": "OiWE9M2OB0SEAq0AMUis1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/ManageRates.AspnetCore.ManageRatesMiddleware.yml",
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.ManageRatesMiddleware.html",
-          "hash": "PsUIi2yf+ytIokiQafg0bQ=="
+          "hash": "T7LDyDc2x4i2himu20/roA=="
         }
       },
       "is_incremental": false,
@@ -153,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.ManageRatesService.html",
-          "hash": "U6B/9fasSnnf7GteESYAlg=="
+          "hash": "PLVDHlt7D+1051YNdKKRBw=="
         }
       },
       "is_incremental": false,
@@ -161,59 +230,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.DelegateManageRatePolicy.yml",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.RatesStricType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ManageRates.AspnetCore.Policies.DelegateManageRatePolicy.html",
-          "hash": "nysVYMSzajkMVkmXPTiSSw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.EndpointManageRatePolicy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ManageRates.AspnetCore.Policies.EndpointManageRatePolicy.html",
-          "hash": "xgyFnqu5yWfYfUqq6nwYwg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.IpManageRatePolicy.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ManageRates.AspnetCore.Policies.IpManageRatePolicy.html",
-          "hash": "IqQ2zR/ZrePXE2kliptYUw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.RegexManageRatePolicyDecorator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ManageRates.AspnetCore.Policies.RegexManageRatePolicyDecorator.html",
-          "hash": "b40hQe0VK/AcN/zGSbTDvQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ManageRates.AspnetCore.Policies.html",
-          "hash": "gWMhzPz+r6NzAC8ziUidng=="
+          "relative_path": "api/ManageRates.AspnetCore.RatesStricType.html",
+          "hash": "zmXluA4joCmCicofOYZz8A=="
         }
       },
       "is_incremental": false,
@@ -225,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.html",
-          "hash": "SIwNdHOaKqro+FFOkCm69g=="
+          "hash": "6i5uhzqBmsLM0W59It+bug=="
         }
       },
       "is_incremental": false,
@@ -237,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.Abstractions.IKeyedManageRatePolicy.html",
-          "hash": "SLT1K0QJTE5mssJTABHAmw=="
+          "hash": "GbSXIKHNqDtla1qL3W/eEQ=="
         }
       },
       "is_incremental": false,
@@ -281,23 +302,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.Core.EndpointManageRateAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ManageRates.Core.EndpointManageRateAttribute.html",
-          "hash": "6MDZMAd5WZrQq9FtCDk1fA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/ManageRates.Core.Extensions.RateStrictPeriodExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.Extensions.RateStrictPeriodExtensions.html",
-          "hash": "sTsdGd2p9dsbESwPkRtXGA=="
+          "hash": "aGtc+ygyko1Tjpr52B9+Bw=="
         }
       },
       "is_incremental": false,
@@ -317,23 +326,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.Core.IpManageRateAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ManageRates.Core.IpManageRateAttribute.html",
-          "hash": "EaMLzQEnewCnyn9pO/t/vA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/ManageRates.Core.ManageRateBulder.yml",
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.ManageRateBulder.html",
-          "hash": "fGBpr30YvuQnQC0yfamdkA=="
+          "hash": "wSdxDuOyYvQKmg7V5V41dg=="
         }
       },
       "is_incremental": false,
@@ -377,11 +374,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Model.RatesStrictPeriod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Model.RatesStrictPeriod.html",
+          "hash": "kZ2qWcnLoaSu1tTnpuDUhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/ManageRates.Core.Model.yml",
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.Model.html",
-          "hash": "tfFUNN8Dj2hTGzzoBptUzw=="
+          "hash": "x7c/eOFSpo1Fr4++LVCSLA=="
         }
       },
       "is_incremental": false,
@@ -393,7 +402,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.Policies.DelegateKeyedRatePolicy.html",
-          "hash": "zZsI5kOq6J5raIxiEnqReg=="
+          "hash": "5wO0W2hQ6pw2klHqk3vYWQ=="
         }
       },
       "is_incremental": false,
@@ -417,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.Policies.KeyedTimeRatePolicy.html",
-          "hash": "foA069GBAVGTnZrgLRyJGA=="
+          "hash": "3voZjhS1w7AadGuR6N7SeQ=="
         }
       },
       "is_incremental": false,
@@ -449,18 +458,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.Core.RatesStrictPeriod.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ManageRates.Core.RatesStrictPeriod.html",
-          "hash": "geKmBiFufioUwIZxFU5ufw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/ManageRates.Core.TimeService.yml",
       "output": {
         ".html": {
@@ -473,23 +470,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.Core.UserManageRateAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ManageRates.Core.UserManageRateAttribute.html",
-          "hash": "Y6TalWpnwNa2p6nIq+jXIw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/ManageRates.Core.yml",
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.html",
-          "hash": "O1da9HhfKzq/WntRgHx2xw=="
+          "hash": "HikJwn3Ae46VmCkVi702QA=="
         }
       },
       "is_incremental": false,
@@ -501,7 +486,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.ManageRatesApplicationBuilderExtensions.html",
-          "hash": "z6sIzz3q7RcBydIT7s9RdA=="
+          "hash": "A6IggrYB+oij+danCkLcrw=="
         }
       },
       "is_incremental": false,
@@ -513,7 +498,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.ManageRatesServiceCollectionExtensions.html",
-          "hash": "MmFL6MdxSuz4hs3WcOq5Ug=="
+          "hash": "ukFGVDdlSyyT6tXYnfnvFg=="
         }
       },
       "is_incremental": false,
@@ -525,7 +510,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.html",
-          "hash": "SrWVoX7nGtwfQ6BArGD/Ag=="
+          "hash": "9sewpWMWPi55O50kUVNGNw=="
         }
       },
       "is_incremental": false,
@@ -537,7 +522,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "TnDFsCwbmr3ThvVxNHiPTw=="
+          "hash": "LlATLZHoYvrq5VtyJPoq2w=="
         }
       },
       "is_incremental": false,
@@ -569,13 +554,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 1
+          "skipped_file_count": 2
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 41,
-          "skipped_file_count": 41
+          "total_file_count": 40,
+          "skipped_file_count": 40
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
