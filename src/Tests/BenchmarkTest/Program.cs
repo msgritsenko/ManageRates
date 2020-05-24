@@ -1,4 +1,5 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Running;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,8 @@ namespace Benchmark.Test
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<SingleVsFirst>();
+            var config = DefaultConfig.Instance;
+            var summary = BenchmarkRunner.Run<SingleVsFirst>(config);
         }
     }
 }

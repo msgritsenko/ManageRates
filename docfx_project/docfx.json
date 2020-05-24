@@ -48,6 +48,6 @@
       "_enableSearch": true
     },
     "markdownEngineName": "markdig",
-    "dest": "_site"
+    "dest": "../docs/"
   }
 }
