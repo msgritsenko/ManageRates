@@ -19,15 +19,17 @@ namespace WebApi
 
         public IConfiguration Configuration { get; }
 
+        // <setup_middleware>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Manage rates service uses IMemoryCache, sow we need to add it.
             services.AddMemoryCache();
-
-
             // Register rate strictions services.
             services.AddRateStrictions();
         }
+        // </setup_middleware>
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -41,7 +43,9 @@ namespace WebApi
             app.UseRouting();
 
             // Attention! RateStrictions middleware should be places between UseRouting and UseEndpoints.
-            // app.UseManageRates();
+            /*
+            app.UseManageRates();
+            */
             app.UseManageRates(policyBuilder => policyBuilder
                 .AddManageRates("/raw/.*endpoint.*", 2, RatesStrictPeriod.Second)
                 .AddManageRatesByIp("/raw/.*ip.*", 2, RatesStrictPeriod.Second)

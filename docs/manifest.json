@@ -26,15 +26,518 @@
     },
     {
       "log_codes": [
-        "InvalidFileLink",
-        "codesnippet-not-found"
+        "InvalidFileLink"
       ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "SOTQD8HzXROD//6+GHnliw=="
+          "hash": "uAtFKMYDeSgOEMtjsXy3cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Abstractions.IHttpContextRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Abstractions.IHttpContextRatePolicy.html",
+          "hash": "XT5sce0WgDcGZyrgGbJobA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Abstractions.IManageRatesService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Abstractions.IManageRatesService.html",
+          "hash": "AfJ8tKhXX34PXgWX7anLWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Abstractions.html",
+          "hash": "zL6DULks3IVj7RJUDhFtCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.html",
+          "hash": "xDXDYIyJ7lZTlpfjGTuWNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Builder.html",
+          "hash": "mz1CsKTT+XPueY2IU3GVmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Configuration.ManageRatesConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Configuration.ManageRatesConfiguration.html",
+          "hash": "fM4rKDH1am0KsZyIVQ1LgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html",
+          "hash": "sPHvIADk9+ysXBJwpmLisQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Configuration.html",
+          "hash": "sXpzefo/i6BegQyenZ/ekQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.ManageRatesMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.ManageRatesMiddleware.html",
+          "hash": "PsUIi2yf+ytIokiQafg0bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.ManageRatesService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.ManageRatesService.html",
+          "hash": "U6B/9fasSnnf7GteESYAlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.DelegateManageRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Policies.DelegateManageRatePolicy.html",
+          "hash": "nysVYMSzajkMVkmXPTiSSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.EndpointManageRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Policies.EndpointManageRatePolicy.html",
+          "hash": "xgyFnqu5yWfYfUqq6nwYwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.IpManageRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Policies.IpManageRatePolicy.html",
+          "hash": "IqQ2zR/ZrePXE2kliptYUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.RegexManageRatePolicyDecorator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Policies.RegexManageRatePolicyDecorator.html",
+          "hash": "b40hQe0VK/AcN/zGSbTDvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.Policies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.Policies.html",
+          "hash": "gWMhzPz+r6NzAC8ziUidng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.html",
+          "hash": "SIwNdHOaKqro+FFOkCm69g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Abstractions.IKeyedManageRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Abstractions.IKeyedManageRatePolicy.html",
+          "hash": "SLT1K0QJTE5mssJTABHAmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Abstractions.IManageRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Abstractions.IManageRatePolicy.html",
+          "hash": "tnPKSL4N7XQI9wgLHZcUuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Abstractions.ITimeService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Abstractions.ITimeService.html",
+          "hash": "iqR99faWIB8/zPUYElRCzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Abstractions.html",
+          "hash": "jbg2hiXZpLH6YFpksGgQ9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.EndpointManageRateAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.EndpointManageRateAttribute.html",
+          "hash": "6MDZMAd5WZrQq9FtCDk1fA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Extensions.RateStrictPeriodExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Extensions.RateStrictPeriodExtensions.html",
+          "hash": "sTsdGd2p9dsbESwPkRtXGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Extensions.html",
+          "hash": "DXG9K3ImEEZI9np/+11H+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.IpManageRateAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.IpManageRateAttribute.html",
+          "hash": "EaMLzQEnewCnyn9pO/t/vA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.ManageRateBulder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.ManageRateBulder.html",
+          "hash": "fGBpr30YvuQnQC0yfamdkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Model.KeyedManageRatesRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Model.KeyedManageRatesRequest.html",
+          "hash": "ekEZAN2PmuQL1LPzKYXx2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Model.ManageRatesRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Model.ManageRatesRequest.html",
+          "hash": "oqtDEcxbGO9i2XpuWUcv4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Model.ManageRatesResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Model.ManageRatesResult.html",
+          "hash": "fpXUIbzpnZatyJudsUNbVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Model.html",
+          "hash": "tfFUNN8Dj2hTGzzoBptUzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Policies.DelegateKeyedRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Policies.DelegateKeyedRatePolicy.html",
+          "hash": "zZsI5kOq6J5raIxiEnqReg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Policies.DelegateRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Policies.DelegateRatePolicy.html",
+          "hash": "ev0BNcX35AWOIWHxYVH88w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Policies.KeyedTimeRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Policies.KeyedTimeRatePolicy.html",
+          "hash": "foA069GBAVGTnZrgLRyJGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Policies.TimeRatePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Policies.TimeRatePolicy.html",
+          "hash": "QM30W54uGlP+hPlRHmZN9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.Policies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.Policies.html",
+          "hash": "bJ6fZHGvVUIhqOzXtEAqDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.RatesStrictPeriod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.RatesStrictPeriod.html",
+          "hash": "geKmBiFufioUwIZxFU5ufw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.TimeService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.TimeService.html",
+          "hash": "L3q4EB5TwZA2JtKZdWksJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.UserManageRateAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.UserManageRateAttribute.html",
+          "hash": "Y6TalWpnwNa2p6nIq+jXIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.Core.html",
+          "hash": "O1da9HhfKzq/WntRgHx2xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Microsoft.Extensions.DependencyInjection.ManageRatesApplicationBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.ManageRatesApplicationBuilderExtensions.html",
+          "hash": "z6sIzz3q7RcBydIT7s9RdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Microsoft.Extensions.DependencyInjection.ManageRatesServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.ManageRatesServiceCollectionExtensions.html",
+          "hash": "MmFL6MdxSuz4hs3WcOq5Ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Microsoft.Extensions.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.html",
+          "hash": "SrWVoX7nGtwfQ6BArGD/Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "TnDFsCwbmr3ThvVxNHiPTw=="
         }
       },
       "is_incremental": false,
@@ -46,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "yyrnfK46rE7xENHSDaZj4g=="
+          "hash": "sm3iK35lB+JhltfUbiuWTw=="
         }
       },
       "is_incremental": false,
@@ -56,19 +559,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
+          "skipped_file_count": 1
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 41,
+          "skipped_file_count": 41
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

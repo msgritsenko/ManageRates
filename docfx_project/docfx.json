@@ -11,7 +11,7 @@
             "**/bin/**",
             "**/obj/**"
           ],
-          "src": "../../src"
+          "src": "../src"
         }
       ],
       "dest": "obj/api"

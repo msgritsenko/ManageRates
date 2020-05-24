@@ -1,9 +1,9 @@
 - name: Home
   href: index.md
-- name: Articles
-  href: articles/
-  homepage: articles/intro.md
+# - name: Articles
+#   href: articles/
+#   homepage: articles/intro.md
 - name: API Documentation
   href: obj/api/
-- name: REST API
-  href: restapi/
+# - name: REST API
+#   href: restapi/
