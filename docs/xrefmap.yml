@@ -45,6 +45,32 @@ references:
   isSpec: "True"
   fullName: ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.IsPermitted
   nameWithType: IHttpManageRatePolicy.IsPermitted
+- uid: ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.Name
+  name: Name
+  href: api/ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.html#ManageRates_AspnetCore_Abstractions_IHttpManageRatePolicy_Name
+  commentId: P:ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.Name
+  fullName: ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.Name
+  nameWithType: IHttpManageRatePolicy.Name
+- uid: ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.Name*
+  name: Name
+  href: api/ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.html#ManageRates_AspnetCore_Abstractions_IHttpManageRatePolicy_Name_
+  commentId: Overload:ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.Name
+  isSpec: "True"
+  fullName: ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.Name
+  nameWithType: IHttpManageRatePolicy.Name
+- uid: ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.ReferenceName
+  name: ReferenceName
+  href: api/ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.html#ManageRates_AspnetCore_Abstractions_IHttpManageRatePolicy_ReferenceName
+  commentId: P:ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.ReferenceName
+  fullName: ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.ReferenceName
+  nameWithType: IHttpManageRatePolicy.ReferenceName
+- uid: ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.ReferenceName*
+  name: ReferenceName
+  href: api/ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.html#ManageRates_AspnetCore_Abstractions_IHttpManageRatePolicy_ReferenceName_
+  commentId: Overload:ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.ReferenceName
+  isSpec: "True"
+  fullName: ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.ReferenceName
+  nameWithType: IHttpManageRatePolicy.ReferenceName
 - uid: ManageRates.AspnetCore.Abstractions.IManageRatesService
   name: IManageRatesService
   href: api/ManageRates.AspnetCore.Abstractions.IManageRatesService.html
@@ -92,15 +118,24 @@ references:
   fullName.vb: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates(Of TBuilder)(TBuilder, ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
   nameWithType: ManageRatesEndpointRouteBuilderExtensions.ManageRates<TBuilder>(TBuilder, HttpManageRatePolicy.PolicyDelegate)
   nameWithType.vb: ManageRatesEndpointRouteBuilderExtensions.ManageRates(Of TBuilder)(TBuilder, HttpManageRatePolicy.PolicyDelegate)
-- uid: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates``1(``0,System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  name: ManageRates<TBuilder>(TBuilder, Int32, RatesStrictPeriod, RatesStricType)
-  href: api/ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.html#ManageRates_AspnetCore_Builder_ManageRatesEndpointRouteBuilderExtensions_ManageRates__1___0_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_ManageRates_AspnetCore_RatesStricType_
-  commentId: M:ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates``1(``0,System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  name.vb: ManageRates(Of TBuilder)(TBuilder, Int32, RatesStrictPeriod, RatesStricType)
-  fullName: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates<TBuilder>(TBuilder, System.Int32, ManageRates.Core.Model.RatesStrictPeriod, ManageRates.AspnetCore.RatesStricType)
-  fullName.vb: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates(Of TBuilder)(TBuilder, System.Int32, ManageRates.Core.Model.RatesStrictPeriod, ManageRates.AspnetCore.RatesStricType)
-  nameWithType: ManageRatesEndpointRouteBuilderExtensions.ManageRates<TBuilder>(TBuilder, Int32, RatesStrictPeriod, RatesStricType)
-  nameWithType.vb: ManageRatesEndpointRouteBuilderExtensions.ManageRates(Of TBuilder)(TBuilder, Int32, RatesStrictPeriod, RatesStricType)
+- uid: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates``1(``0,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  name: ManageRates<TBuilder>(TBuilder, Int32, Period, KeyType)
+  href: api/ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.html#ManageRates_AspnetCore_Builder_ManageRatesEndpointRouteBuilderExtensions_ManageRates__1___0_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_
+  commentId: M:ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates``1(``0,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  name.vb: ManageRates(Of TBuilder)(TBuilder, Int32, Period, KeyType)
+  fullName: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates<TBuilder>(TBuilder, System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyType)
+  fullName.vb: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates(Of TBuilder)(TBuilder, System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyType)
+  nameWithType: ManageRatesEndpointRouteBuilderExtensions.ManageRates<TBuilder>(TBuilder, Int32, Period, KeyType)
+  nameWithType.vb: ManageRatesEndpointRouteBuilderExtensions.ManageRates(Of TBuilder)(TBuilder, Int32, Period, KeyType)
+- uid: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates``1(``0,System.String)
+  name: ManageRates<TBuilder>(TBuilder, String)
+  href: api/ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.html#ManageRates_AspnetCore_Builder_ManageRatesEndpointRouteBuilderExtensions_ManageRates__1___0_System_String_
+  commentId: M:ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates``1(``0,System.String)
+  name.vb: ManageRates(Of TBuilder)(TBuilder, String)
+  fullName: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates<TBuilder>(TBuilder, System.String)
+  fullName.vb: ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.ManageRates(Of TBuilder)(TBuilder, System.String)
+  nameWithType: ManageRatesEndpointRouteBuilderExtensions.ManageRates<TBuilder>(TBuilder, String)
+  nameWithType.vb: ManageRatesEndpointRouteBuilderExtensions.ManageRates(Of TBuilder)(TBuilder, String)
 - uid: ManageRates.AspnetCore.Configuration
   name: ManageRates.AspnetCore.Configuration
   href: api/ManageRates.AspnetCore.Configuration.html
@@ -145,58 +180,50 @@ references:
   isSpec: "True"
   fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.ManageRatesConfigurationBuilder
   nameWithType: ManageRatesConfigurationBuilder.ManageRatesConfigurationBuilder
-- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRates(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod)
-  name: AddManageRates(String, Int32, RatesStrictPeriod)
-  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRates_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_
-  commentId: M:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRates(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod)
-  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRates(System.String, System.Int32, ManageRates.Core.Model.RatesStrictPeriod)
-  nameWithType: ManageRatesConfigurationBuilder.AddManageRates(String, Int32, RatesStrictPeriod)
-- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRates*
-  name: AddManageRates
-  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRates_
-  commentId: Overload:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRates
+- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
+  name: AddNamedPolicy(String, HttpManageRatePolicy.PolicyDelegate)
+  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate_
+  commentId: M:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
+  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String, ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
+  nameWithType: ManageRatesConfigurationBuilder.AddNamedPolicy(String, HttpManageRatePolicy.PolicyDelegate)
+- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyExtractorDelegate)
+  name: AddNamedPolicy(String, Int32, Period, KeyExtractorDelegate)
+  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyExtractorDelegate_
+  commentId: M:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyExtractorDelegate)
+  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String, System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyExtractorDelegate)
+  nameWithType: ManageRatesConfigurationBuilder.AddNamedPolicy(String, Int32, Period, KeyExtractorDelegate)
+- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  name: AddNamedPolicy(String, Int32, Period, KeyType)
+  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_
+  commentId: M:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String, System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyType)
+  nameWithType: ManageRatesConfigurationBuilder.AddNamedPolicy(String, Int32, Period, KeyType)
+- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  name: AddNamedPolicy(String, String, Int32, Period, KeyType)
+  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_
+  commentId: M:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String, System.String, System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyType)
+  nameWithType: ManageRatesConfigurationBuilder.AddNamedPolicy(String, String, Int32, Period, KeyType)
+- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy*
+  name: AddNamedPolicy
+  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_
+  commentId: Overload:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy
   isSpec: "True"
-  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRates
-  nameWithType: ManageRatesConfigurationBuilder.AddManageRates
-- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByDelegate(System.String,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
-  name: AddManageRatesByDelegate(String, HttpManageRatePolicy.PolicyDelegate)
-  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByDelegate_System_String_ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate_
-  commentId: M:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByDelegate(System.String,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
-  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByDelegate(System.String, ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
-  nameWithType: ManageRatesConfigurationBuilder.AddManageRatesByDelegate(String, HttpManageRatePolicy.PolicyDelegate)
-- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByDelegate*
-  name: AddManageRatesByDelegate
-  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByDelegate_
-  commentId: Overload:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByDelegate
+  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy
+  nameWithType: ManageRatesConfigurationBuilder.AddNamedPolicy
+- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddPolicy(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  name: AddPolicy(String, Int32, Period, KeyType)
+  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddPolicy_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_
+  commentId: M:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddPolicy(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddPolicy(System.String, System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyType)
+  nameWithType: ManageRatesConfigurationBuilder.AddPolicy(String, Int32, Period, KeyType)
+- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddPolicy*
+  name: AddPolicy
+  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddPolicy_
+  commentId: Overload:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddPolicy
   isSpec: "True"
-  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByDelegate
-  nameWithType: ManageRatesConfigurationBuilder.AddManageRatesByDelegate
-- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByIp(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod)
-  name: AddManageRatesByIp(String, Int32, RatesStrictPeriod)
-  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByIp_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_
-  commentId: M:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByIp(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod)
-  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByIp(System.String, System.Int32, ManageRates.Core.Model.RatesStrictPeriod)
-  nameWithType: ManageRatesConfigurationBuilder.AddManageRatesByIp(String, Int32, RatesStrictPeriod)
-- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByIp*
-  name: AddManageRatesByIp
-  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByIp_
-  commentId: Overload:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByIp
-  isSpec: "True"
-  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByIp
-  nameWithType: ManageRatesConfigurationBuilder.AddManageRatesByIp
-- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByUser(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod)
-  name: AddManageRatesByUser(String, Int32, RatesStrictPeriod)
-  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByUser_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_
-  commentId: M:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByUser(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod)
-  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByUser(System.String, System.Int32, ManageRates.Core.Model.RatesStrictPeriod)
-  nameWithType: ManageRatesConfigurationBuilder.AddManageRatesByUser(String, Int32, RatesStrictPeriod)
-- uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByUser*
-  name: AddManageRatesByUser
-  href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByUser_
-  commentId: Overload:ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByUser
-  isSpec: "True"
-  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByUser
-  nameWithType: ManageRatesConfigurationBuilder.AddManageRatesByUser
+  fullName: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddPolicy
+  nameWithType: ManageRatesConfigurationBuilder.AddPolicy
 - uid: ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.Build
   name: Build()
   href: api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html#ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_Build
@@ -267,12 +294,38 @@ references:
   isSpec: "True"
   fullName: ManageRates.AspnetCore.HttpManageRatePolicy.IsPermitted
   nameWithType: HttpManageRatePolicy.IsPermitted
+- uid: ManageRates.AspnetCore.HttpManageRatePolicy.Name
+  name: Name
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicy.html#ManageRates_AspnetCore_HttpManageRatePolicy_Name
+  commentId: P:ManageRates.AspnetCore.HttpManageRatePolicy.Name
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicy.Name
+  nameWithType: HttpManageRatePolicy.Name
+- uid: ManageRates.AspnetCore.HttpManageRatePolicy.Name*
+  name: Name
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicy.html#ManageRates_AspnetCore_HttpManageRatePolicy_Name_
+  commentId: Overload:ManageRates.AspnetCore.HttpManageRatePolicy.Name
+  isSpec: "True"
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicy.Name
+  nameWithType: HttpManageRatePolicy.Name
 - uid: ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate
   name: HttpManageRatePolicy.PolicyDelegate
   href: api/ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate.html
   commentId: T:ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate
   fullName: ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate
   nameWithType: HttpManageRatePolicy.PolicyDelegate
+- uid: ManageRates.AspnetCore.HttpManageRatePolicy.ReferenceName
+  name: ReferenceName
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicy.html#ManageRates_AspnetCore_HttpManageRatePolicy_ReferenceName
+  commentId: P:ManageRates.AspnetCore.HttpManageRatePolicy.ReferenceName
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicy.ReferenceName
+  nameWithType: HttpManageRatePolicy.ReferenceName
+- uid: ManageRates.AspnetCore.HttpManageRatePolicy.ReferenceName*
+  name: ReferenceName
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicy.html#ManageRates_AspnetCore_HttpManageRatePolicy_ReferenceName_
+  commentId: Overload:ManageRates.AspnetCore.HttpManageRatePolicy.ReferenceName
+  isSpec: "True"
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicy.ReferenceName
+  nameWithType: HttpManageRatePolicy.ReferenceName
 - uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder
   name: HttpManageRatePolicyBuilder
   href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html
@@ -285,36 +338,54 @@ references:
   commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate,ManageRates.AspnetCore.HttpManageRatePolicy.AcceptDelegate)
   fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate, ManageRates.AspnetCore.HttpManageRatePolicy.AcceptDelegate)
   nameWithType: HttpManageRatePolicyBuilder.Build(HttpManageRatePolicy.PolicyDelegate, HttpManageRatePolicy.AcceptDelegate)
-- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  name: Build(Int32, RatesStrictPeriod, RatesStricType)
-  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_ManageRates_AspnetCore_RatesStricType_
-  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Int32, ManageRates.Core.Model.RatesStrictPeriod, ManageRates.AspnetCore.RatesStricType)
-  nameWithType: HttpManageRatePolicyBuilder.Build(Int32, RatesStrictPeriod, RatesStricType)
+- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(ManageRates.AspnetCore.KeyExtractorDelegate,System.Int32,ManageRates.Core.Model.Period)
+  name: Build(KeyExtractorDelegate, Int32, Period)
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_ManageRates_AspnetCore_KeyExtractorDelegate_System_Int32_ManageRates_Core_Model_Period_
+  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(ManageRates.AspnetCore.KeyExtractorDelegate,System.Int32,ManageRates.Core.Model.Period)
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(ManageRates.AspnetCore.KeyExtractorDelegate, System.Int32, ManageRates.Core.Model.Period)
+  nameWithType: HttpManageRatePolicyBuilder.Build(KeyExtractorDelegate, Int32, Period)
+- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  name: Build(Int32, Period, KeyType)
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_
+  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyType)
+  nameWithType: HttpManageRatePolicyBuilder.Build(Int32, Period, KeyType)
+- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String)
+  name: Build(String)
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_String_
+  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String)
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String)
+  nameWithType: HttpManageRatePolicyBuilder.Build(String)
 - uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
   name: Build(String, HttpManageRatePolicy.PolicyDelegate)
   href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_String_ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate_
   commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
   fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String, ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
   nameWithType: HttpManageRatePolicyBuilder.Build(String, HttpManageRatePolicy.PolicyDelegate)
-- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  name: Build(String, Int32, RatesStrictPeriod, RatesStricType)
-  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_ManageRates_AspnetCore_RatesStricType_
-  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String, System.Int32, ManageRates.Core.Model.RatesStrictPeriod, ManageRates.AspnetCore.RatesStricType)
-  nameWithType: HttpManageRatePolicyBuilder.Build(String, Int32, RatesStrictPeriod, RatesStricType)
+- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String,ManageRates.AspnetCore.KeyExtractorDelegate,System.Int32,ManageRates.Core.Model.Period)
+  name: Build(String, KeyExtractorDelegate, Int32, Period)
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_String_ManageRates_AspnetCore_KeyExtractorDelegate_System_Int32_ManageRates_Core_Model_Period_
+  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String,ManageRates.AspnetCore.KeyExtractorDelegate,System.Int32,ManageRates.Core.Model.Period)
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String, ManageRates.AspnetCore.KeyExtractorDelegate, System.Int32, ManageRates.Core.Model.Period)
+  nameWithType: HttpManageRatePolicyBuilder.Build(String, KeyExtractorDelegate, Int32, Period)
+- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  name: Build(String, Int32, Period, KeyType)
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_
+  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.String, System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyType)
+  nameWithType: HttpManageRatePolicyBuilder.Build(String, Int32, Period, KeyType)
 - uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Text.RegularExpressions.Regex,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
   name: Build(Regex, HttpManageRatePolicy.PolicyDelegate)
   href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_Text_RegularExpressions_Regex_ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate_
   commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Text.RegularExpressions.Regex,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
   fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Text.RegularExpressions.Regex, ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)
   nameWithType: HttpManageRatePolicyBuilder.Build(Regex, HttpManageRatePolicy.PolicyDelegate)
-- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Text.RegularExpressions.Regex,System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  name: Build(Regex, Int32, RatesStrictPeriod, RatesStricType)
-  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_Text_RegularExpressions_Regex_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_ManageRates_AspnetCore_RatesStricType_
-  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Text.RegularExpressions.Regex,System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Text.RegularExpressions.Regex, System.Int32, ManageRates.Core.Model.RatesStrictPeriod, ManageRates.AspnetCore.RatesStricType)
-  nameWithType: HttpManageRatePolicyBuilder.Build(Regex, Int32, RatesStrictPeriod, RatesStricType)
+- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Text.RegularExpressions.Regex,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  name: Build(Regex, Int32, Period, KeyType)
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_System_Text_RegularExpressions_Regex_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_
+  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Text.RegularExpressions.Regex,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build(System.Text.RegularExpressions.Regex, System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyType)
+  nameWithType: HttpManageRatePolicyBuilder.Build(Regex, Int32, Period, KeyType)
 - uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build*
   name: Build
   href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_Build_
@@ -322,6 +393,19 @@ references:
   isSpec: "True"
   fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.Build
   nameWithType: HttpManageRatePolicyBuilder.Build
+- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.WithName(ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy,System.String)
+  name: WithName(IHttpManageRatePolicy, String)
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_WithName_ManageRates_AspnetCore_Abstractions_IHttpManageRatePolicy_System_String_
+  commentId: M:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.WithName(ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy,System.String)
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.WithName(ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy, System.String)
+  nameWithType: HttpManageRatePolicyBuilder.WithName(IHttpManageRatePolicy, String)
+- uid: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.WithName*
+  name: WithName
+  href: api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html#ManageRates_AspnetCore_HttpManageRatePolicyBuilder_WithName_
+  commentId: Overload:ManageRates.AspnetCore.HttpManageRatePolicyBuilder.WithName
+  isSpec: "True"
+  fullName: ManageRates.AspnetCore.HttpManageRatePolicyBuilder.WithName
+  nameWithType: HttpManageRatePolicyBuilder.WithName
 - uid: ManageRates.AspnetCore.Infrastructure
   name: ManageRates.AspnetCore.Infrastructure
   href: api/ManageRates.AspnetCore.Infrastructure.html
@@ -334,12 +418,18 @@ references:
   commentId: T:ManageRates.AspnetCore.Infrastructure.ManageRateAttribute
   fullName: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute
   nameWithType: ManageRateAttribute
-- uid: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.#ctor(System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  name: ManageRateAttribute(Int32, RatesStrictPeriod, RatesStricType)
-  href: api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html#ManageRates_AspnetCore_Infrastructure_ManageRateAttribute__ctor_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_ManageRates_AspnetCore_RatesStricType_
-  commentId: M:ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.#ctor(System.Int32,ManageRates.Core.Model.RatesStrictPeriod,ManageRates.AspnetCore.RatesStricType)
-  fullName: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.ManageRateAttribute(System.Int32, ManageRates.Core.Model.RatesStrictPeriod, ManageRates.AspnetCore.RatesStricType)
-  nameWithType: ManageRateAttribute.ManageRateAttribute(Int32, RatesStrictPeriod, RatesStricType)
+- uid: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.#ctor(System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  name: ManageRateAttribute(Int32, Period, KeyType)
+  href: api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html#ManageRates_AspnetCore_Infrastructure_ManageRateAttribute__ctor_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_
+  commentId: M:ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.#ctor(System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)
+  fullName: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.ManageRateAttribute(System.Int32, ManageRates.Core.Model.Period, ManageRates.AspnetCore.KeyType)
+  nameWithType: ManageRateAttribute.ManageRateAttribute(Int32, Period, KeyType)
+- uid: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.#ctor(System.String)
+  name: ManageRateAttribute(String)
+  href: api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html#ManageRates_AspnetCore_Infrastructure_ManageRateAttribute__ctor_System_String_
+  commentId: M:ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.#ctor(System.String)
+  fullName: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.ManageRateAttribute(System.String)
+  nameWithType: ManageRateAttribute.ManageRateAttribute(String)
 - uid: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.#ctor*
   name: ManageRateAttribute
   href: api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html#ManageRates_AspnetCore_Infrastructure_ManageRateAttribute__ctor_
@@ -373,6 +463,68 @@ references:
   isSpec: "True"
   fullName: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.IsPermitted
   nameWithType: ManageRateAttribute.IsPermitted
+- uid: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.Name
+  name: Name
+  href: api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html#ManageRates_AspnetCore_Infrastructure_ManageRateAttribute_Name
+  commentId: P:ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.Name
+  fullName: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.Name
+  nameWithType: ManageRateAttribute.Name
+- uid: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.Name*
+  name: Name
+  href: api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html#ManageRates_AspnetCore_Infrastructure_ManageRateAttribute_Name_
+  commentId: Overload:ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.Name
+  isSpec: "True"
+  fullName: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.Name
+  nameWithType: ManageRateAttribute.Name
+- uid: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.ReferenceName
+  name: ReferenceName
+  href: api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html#ManageRates_AspnetCore_Infrastructure_ManageRateAttribute_ReferenceName
+  commentId: P:ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.ReferenceName
+  fullName: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.ReferenceName
+  nameWithType: ManageRateAttribute.ReferenceName
+- uid: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.ReferenceName*
+  name: ReferenceName
+  href: api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html#ManageRates_AspnetCore_Infrastructure_ManageRateAttribute_ReferenceName_
+  commentId: Overload:ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.ReferenceName
+  isSpec: "True"
+  fullName: ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.ReferenceName
+  nameWithType: ManageRateAttribute.ReferenceName
+- uid: ManageRates.AspnetCore.KeyExtractorDelegate
+  name: KeyExtractorDelegate
+  href: api/ManageRates.AspnetCore.KeyExtractorDelegate.html
+  commentId: T:ManageRates.AspnetCore.KeyExtractorDelegate
+  fullName: ManageRates.AspnetCore.KeyExtractorDelegate
+  nameWithType: KeyExtractorDelegate
+- uid: ManageRates.AspnetCore.KeyType
+  name: KeyType
+  href: api/ManageRates.AspnetCore.KeyType.html
+  commentId: T:ManageRates.AspnetCore.KeyType
+  fullName: ManageRates.AspnetCore.KeyType
+  nameWithType: KeyType
+- uid: ManageRates.AspnetCore.KeyType.Ip
+  name: Ip
+  href: api/ManageRates.AspnetCore.KeyType.html#ManageRates_AspnetCore_KeyType_Ip
+  commentId: F:ManageRates.AspnetCore.KeyType.Ip
+  fullName: ManageRates.AspnetCore.KeyType.Ip
+  nameWithType: KeyType.Ip
+- uid: ManageRates.AspnetCore.KeyType.None
+  name: None
+  href: api/ManageRates.AspnetCore.KeyType.html#ManageRates_AspnetCore_KeyType_None
+  commentId: F:ManageRates.AspnetCore.KeyType.None
+  fullName: ManageRates.AspnetCore.KeyType.None
+  nameWithType: KeyType.None
+- uid: ManageRates.AspnetCore.KeyType.RequestPath
+  name: RequestPath
+  href: api/ManageRates.AspnetCore.KeyType.html#ManageRates_AspnetCore_KeyType_RequestPath
+  commentId: F:ManageRates.AspnetCore.KeyType.RequestPath
+  fullName: ManageRates.AspnetCore.KeyType.RequestPath
+  nameWithType: KeyType.RequestPath
+- uid: ManageRates.AspnetCore.KeyType.User
+  name: User
+  href: api/ManageRates.AspnetCore.KeyType.html#ManageRates_AspnetCore_KeyType_User
+  commentId: F:ManageRates.AspnetCore.KeyType.User
+  fullName: ManageRates.AspnetCore.KeyType.User
+  nameWithType: KeyType.User
 - uid: ManageRates.AspnetCore.ManageRatesMiddleware
   name: ManageRatesMiddleware
   href: api/ManageRates.AspnetCore.ManageRatesMiddleware.html
@@ -440,36 +592,6 @@ references:
   isSpec: "True"
   fullName: ManageRates.AspnetCore.ManageRatesService.Process
   nameWithType: ManageRatesService.Process
-- uid: ManageRates.AspnetCore.RatesStricType
-  name: RatesStricType
-  href: api/ManageRates.AspnetCore.RatesStricType.html
-  commentId: T:ManageRates.AspnetCore.RatesStricType
-  fullName: ManageRates.AspnetCore.RatesStricType
-  nameWithType: RatesStricType
-- uid: ManageRates.AspnetCore.RatesStricType.Endpoint
-  name: Endpoint
-  href: api/ManageRates.AspnetCore.RatesStricType.html#ManageRates_AspnetCore_RatesStricType_Endpoint
-  commentId: F:ManageRates.AspnetCore.RatesStricType.Endpoint
-  fullName: ManageRates.AspnetCore.RatesStricType.Endpoint
-  nameWithType: RatesStricType.Endpoint
-- uid: ManageRates.AspnetCore.RatesStricType.Ip
-  name: Ip
-  href: api/ManageRates.AspnetCore.RatesStricType.html#ManageRates_AspnetCore_RatesStricType_Ip
-  commentId: F:ManageRates.AspnetCore.RatesStricType.Ip
-  fullName: ManageRates.AspnetCore.RatesStricType.Ip
-  nameWithType: RatesStricType.Ip
-- uid: ManageRates.AspnetCore.RatesStricType.None
-  name: None
-  href: api/ManageRates.AspnetCore.RatesStricType.html#ManageRates_AspnetCore_RatesStricType_None
-  commentId: F:ManageRates.AspnetCore.RatesStricType.None
-  fullName: ManageRates.AspnetCore.RatesStricType.None
-  nameWithType: RatesStricType.None
-- uid: ManageRates.AspnetCore.RatesStricType.User
-  name: User
-  href: api/ManageRates.AspnetCore.RatesStricType.html#ManageRates_AspnetCore_RatesStricType_User
-  commentId: F:ManageRates.AspnetCore.RatesStricType.User
-  fullName: ManageRates.AspnetCore.RatesStricType.User
-  nameWithType: RatesStricType.User
 - uid: ManageRates.Core
   name: ManageRates.Core
   href: api/ManageRates.Core.html
@@ -551,12 +673,12 @@ references:
   commentId: T:ManageRates.Core.Extensions.RateStrictPeriodExtensions
   fullName: ManageRates.Core.Extensions.RateStrictPeriodExtensions
   nameWithType: RateStrictPeriodExtensions
-- uid: ManageRates.Core.Extensions.RateStrictPeriodExtensions.ToTimeSpan(ManageRates.Core.Model.RatesStrictPeriod)
-  name: ToTimeSpan(RatesStrictPeriod)
-  href: api/ManageRates.Core.Extensions.RateStrictPeriodExtensions.html#ManageRates_Core_Extensions_RateStrictPeriodExtensions_ToTimeSpan_ManageRates_Core_Model_RatesStrictPeriod_
-  commentId: M:ManageRates.Core.Extensions.RateStrictPeriodExtensions.ToTimeSpan(ManageRates.Core.Model.RatesStrictPeriod)
-  fullName: ManageRates.Core.Extensions.RateStrictPeriodExtensions.ToTimeSpan(ManageRates.Core.Model.RatesStrictPeriod)
-  nameWithType: RateStrictPeriodExtensions.ToTimeSpan(RatesStrictPeriod)
+- uid: ManageRates.Core.Extensions.RateStrictPeriodExtensions.ToTimeSpan(ManageRates.Core.Model.Period)
+  name: ToTimeSpan(Period)
+  href: api/ManageRates.Core.Extensions.RateStrictPeriodExtensions.html#ManageRates_Core_Extensions_RateStrictPeriodExtensions_ToTimeSpan_ManageRates_Core_Model_Period_
+  commentId: M:ManageRates.Core.Extensions.RateStrictPeriodExtensions.ToTimeSpan(ManageRates.Core.Model.Period)
+  fullName: ManageRates.Core.Extensions.RateStrictPeriodExtensions.ToTimeSpan(ManageRates.Core.Model.Period)
+  nameWithType: RateStrictPeriodExtensions.ToTimeSpan(Period)
 - uid: ManageRates.Core.Extensions.RateStrictPeriodExtensions.ToTimeSpan*
   name: ToTimeSpan
   href: api/ManageRates.Core.Extensions.RateStrictPeriodExtensions.html#ManageRates_Core_Extensions_RateStrictPeriodExtensions_ToTimeSpan_
@@ -570,12 +692,12 @@ references:
   commentId: T:ManageRates.Core.ManageRateBulder
   fullName: ManageRates.Core.ManageRateBulder
   nameWithType: ManageRateBulder
-- uid: ManageRates.Core.ManageRateBulder.BuildDefaultPolicy(ManageRates.Core.Model.RatesStrictPeriod,System.Int32)
-  name: BuildDefaultPolicy(RatesStrictPeriod, Int32)
-  href: api/ManageRates.Core.ManageRateBulder.html#ManageRates_Core_ManageRateBulder_BuildDefaultPolicy_ManageRates_Core_Model_RatesStrictPeriod_System_Int32_
-  commentId: M:ManageRates.Core.ManageRateBulder.BuildDefaultPolicy(ManageRates.Core.Model.RatesStrictPeriod,System.Int32)
-  fullName: ManageRates.Core.ManageRateBulder.BuildDefaultPolicy(ManageRates.Core.Model.RatesStrictPeriod, System.Int32)
-  nameWithType: ManageRateBulder.BuildDefaultPolicy(RatesStrictPeriod, Int32)
+- uid: ManageRates.Core.ManageRateBulder.BuildDefaultPolicy(ManageRates.Core.Model.Period,System.Int32)
+  name: BuildDefaultPolicy(Period, Int32)
+  href: api/ManageRates.Core.ManageRateBulder.html#ManageRates_Core_ManageRateBulder_BuildDefaultPolicy_ManageRates_Core_Model_Period_System_Int32_
+  commentId: M:ManageRates.Core.ManageRateBulder.BuildDefaultPolicy(ManageRates.Core.Model.Period,System.Int32)
+  fullName: ManageRates.Core.ManageRateBulder.BuildDefaultPolicy(ManageRates.Core.Model.Period, System.Int32)
+  nameWithType: ManageRateBulder.BuildDefaultPolicy(Period, Int32)
 - uid: ManageRates.Core.ManageRateBulder.BuildDefaultPolicy(System.TimeSpan,System.Int32)
   name: BuildDefaultPolicy(TimeSpan, Int32)
   href: api/ManageRates.Core.ManageRateBulder.html#ManageRates_Core_ManageRateBulder_BuildDefaultPolicy_System_TimeSpan_System_Int32_
@@ -589,12 +711,12 @@ references:
   isSpec: "True"
   fullName: ManageRates.Core.ManageRateBulder.BuildDefaultPolicy
   nameWithType: ManageRateBulder.BuildDefaultPolicy
-- uid: ManageRates.Core.ManageRateBulder.BuildKeyedDefaultPolicy(System.Int32,ManageRates.Core.Model.RatesStrictPeriod)
-  name: BuildKeyedDefaultPolicy(Int32, RatesStrictPeriod)
-  href: api/ManageRates.Core.ManageRateBulder.html#ManageRates_Core_ManageRateBulder_BuildKeyedDefaultPolicy_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_
-  commentId: M:ManageRates.Core.ManageRateBulder.BuildKeyedDefaultPolicy(System.Int32,ManageRates.Core.Model.RatesStrictPeriod)
-  fullName: ManageRates.Core.ManageRateBulder.BuildKeyedDefaultPolicy(System.Int32, ManageRates.Core.Model.RatesStrictPeriod)
-  nameWithType: ManageRateBulder.BuildKeyedDefaultPolicy(Int32, RatesStrictPeriod)
+- uid: ManageRates.Core.ManageRateBulder.BuildKeyedDefaultPolicy(System.Int32,ManageRates.Core.Model.Period)
+  name: BuildKeyedDefaultPolicy(Int32, Period)
+  href: api/ManageRates.Core.ManageRateBulder.html#ManageRates_Core_ManageRateBulder_BuildKeyedDefaultPolicy_System_Int32_ManageRates_Core_Model_Period_
+  commentId: M:ManageRates.Core.ManageRateBulder.BuildKeyedDefaultPolicy(System.Int32,ManageRates.Core.Model.Period)
+  fullName: ManageRates.Core.ManageRateBulder.BuildKeyedDefaultPolicy(System.Int32, ManageRates.Core.Model.Period)
+  nameWithType: ManageRateBulder.BuildKeyedDefaultPolicy(Int32, Period)
 - uid: ManageRates.Core.ManageRateBulder.BuildKeyedDefaultPolicy(System.Int32,System.TimeSpan)
   name: BuildKeyedDefaultPolicy(Int32, TimeSpan)
   href: api/ManageRates.Core.ManageRateBulder.html#ManageRates_Core_ManageRateBulder_BuildKeyedDefaultPolicy_System_Int32_System_TimeSpan_
@@ -723,36 +845,36 @@ references:
   isSpec: "True"
   fullName: ManageRates.Core.Model.ManageRatesResult.Permitted
   nameWithType: ManageRatesResult.Permitted
-- uid: ManageRates.Core.Model.RatesStrictPeriod
-  name: RatesStrictPeriod
-  href: api/ManageRates.Core.Model.RatesStrictPeriod.html
-  commentId: T:ManageRates.Core.Model.RatesStrictPeriod
-  fullName: ManageRates.Core.Model.RatesStrictPeriod
-  nameWithType: RatesStrictPeriod
-- uid: ManageRates.Core.Model.RatesStrictPeriod.Hour
+- uid: ManageRates.Core.Model.Period
+  name: Period
+  href: api/ManageRates.Core.Model.Period.html
+  commentId: T:ManageRates.Core.Model.Period
+  fullName: ManageRates.Core.Model.Period
+  nameWithType: Period
+- uid: ManageRates.Core.Model.Period.Hour
   name: Hour
-  href: api/ManageRates.Core.Model.RatesStrictPeriod.html#ManageRates_Core_Model_RatesStrictPeriod_Hour
-  commentId: F:ManageRates.Core.Model.RatesStrictPeriod.Hour
-  fullName: ManageRates.Core.Model.RatesStrictPeriod.Hour
-  nameWithType: RatesStrictPeriod.Hour
-- uid: ManageRates.Core.Model.RatesStrictPeriod.Minute
+  href: api/ManageRates.Core.Model.Period.html#ManageRates_Core_Model_Period_Hour
+  commentId: F:ManageRates.Core.Model.Period.Hour
+  fullName: ManageRates.Core.Model.Period.Hour
+  nameWithType: Period.Hour
+- uid: ManageRates.Core.Model.Period.Minute
   name: Minute
-  href: api/ManageRates.Core.Model.RatesStrictPeriod.html#ManageRates_Core_Model_RatesStrictPeriod_Minute
-  commentId: F:ManageRates.Core.Model.RatesStrictPeriod.Minute
-  fullName: ManageRates.Core.Model.RatesStrictPeriod.Minute
-  nameWithType: RatesStrictPeriod.Minute
-- uid: ManageRates.Core.Model.RatesStrictPeriod.None
+  href: api/ManageRates.Core.Model.Period.html#ManageRates_Core_Model_Period_Minute
+  commentId: F:ManageRates.Core.Model.Period.Minute
+  fullName: ManageRates.Core.Model.Period.Minute
+  nameWithType: Period.Minute
+- uid: ManageRates.Core.Model.Period.None
   name: None
-  href: api/ManageRates.Core.Model.RatesStrictPeriod.html#ManageRates_Core_Model_RatesStrictPeriod_None
-  commentId: F:ManageRates.Core.Model.RatesStrictPeriod.None
-  fullName: ManageRates.Core.Model.RatesStrictPeriod.None
-  nameWithType: RatesStrictPeriod.None
-- uid: ManageRates.Core.Model.RatesStrictPeriod.Second
+  href: api/ManageRates.Core.Model.Period.html#ManageRates_Core_Model_Period_None
+  commentId: F:ManageRates.Core.Model.Period.None
+  fullName: ManageRates.Core.Model.Period.None
+  nameWithType: Period.None
+- uid: ManageRates.Core.Model.Period.Second
   name: Second
-  href: api/ManageRates.Core.Model.RatesStrictPeriod.html#ManageRates_Core_Model_RatesStrictPeriod_Second
-  commentId: F:ManageRates.Core.Model.RatesStrictPeriod.Second
-  fullName: ManageRates.Core.Model.RatesStrictPeriod.Second
-  nameWithType: RatesStrictPeriod.Second
+  href: api/ManageRates.Core.Model.Period.html#ManageRates_Core_Model_Period_Second
+  commentId: F:ManageRates.Core.Model.Period.Second
+  fullName: ManageRates.Core.Model.Period.Second
+  nameWithType: Period.Second
 - uid: ManageRates.Core.Policies
   name: ManageRates.Core.Policies
   href: api/ManageRates.Core.Policies.html

@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "uzTuhhNzKCd1DaGk/F3ynw=="
+          "hash": "VnwKEMLKLXGhpcTJ0rFPZA=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.html",
-          "hash": "LR4zpNA2CkIEYwj5jIB4JQ=="
+          "hash": "j3c1KMzfZBM8fNYLcmg5vA=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Builder.ManageRatesEndpointRouteBuilderExtensions.html",
-          "hash": "6nCbK8elgfj9M4t+PZaLqg=="
+          "hash": "fwaN5PV+fPiWwQIdLHCB/w=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html",
-          "hash": "cGCQzbZqgoIqNN5g8rjA1Q=="
+          "hash": "9WyWprGQPBn6CZSn5/8eTw=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.html",
-          "hash": "3HM/sv0I4qGe3FOsyohkXA=="
+          "hash": "tGzrfNvpbKqFyyolphheAw=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html",
-          "hash": "Sv2lTO4XzsCD3eZwmCFfrg=="
+          "hash": "biDnzzNV62jUsQOrKvaICw=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html",
-          "hash": "0WSbnvtQXsUAyheQ530kkQ=="
+          "hash": "8QxDbf8RUFbikMwZuVKQRQ=="
         }
       },
       "is_incremental": false,
@@ -199,6 +199,30 @@
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Infrastructure.html",
           "hash": "OiWE9M2OB0SEAq0AMUis1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.KeyExtractorDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.KeyExtractorDelegate.html",
+          "hash": "6PW3q5D8ibBswYONauWuqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/ManageRates.AspnetCore.KeyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ManageRates.AspnetCore.KeyType.html",
+          "hash": "LXvhzIVI41TvLK8zxwsx3Q=="
         }
       },
       "is_incremental": false,
@@ -230,23 +254,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.AspnetCore.RatesStricType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ManageRates.AspnetCore.RatesStricType.html",
-          "hash": "zmXluA4joCmCicofOYZz8A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/ManageRates.AspnetCore.yml",
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.html",
-          "hash": "6i5uhzqBmsLM0W59It+bug=="
+          "hash": "7cs/VTL4ewdwK0RTtCDTCg=="
         }
       },
       "is_incremental": false,
@@ -306,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.Extensions.RateStrictPeriodExtensions.html",
-          "hash": "aGtc+ygyko1Tjpr52B9+Bw=="
+          "hash": "2g49QwfRh0/wqe5+oBGbtw=="
         }
       },
       "is_incremental": false,
@@ -330,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.ManageRateBulder.html",
-          "hash": "wSdxDuOyYvQKmg7V5V41dg=="
+          "hash": "eaNhO4FfO4u6unxsdt7a+Q=="
         }
       },
       "is_incremental": false,
@@ -374,11 +386,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/ManageRates.Core.Model.RatesStrictPeriod.yml",
+      "source_relative_path": "obj/api/ManageRates.Core.Model.Period.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ManageRates.Core.Model.RatesStrictPeriod.html",
-          "hash": "kZ2qWcnLoaSu1tTnpuDUhw=="
+          "relative_path": "api/ManageRates.Core.Model.Period.html",
+          "hash": "CNIZ424Jt3p4XNC5vMMIXQ=="
         }
       },
       "is_incremental": false,
@@ -390,7 +402,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.Core.Model.html",
-          "hash": "x7c/eOFSpo1Fr4++LVCSLA=="
+          "hash": "K+rG6RPxVLZ/Pi8pF+u5Zg=="
         }
       },
       "is_incremental": false,
@@ -486,7 +498,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.ManageRatesApplicationBuilderExtensions.html",
-          "hash": "A6IggrYB+oij+danCkLcrw=="
+          "hash": "ZkybJhK6kLWUncT8IS+Y2w=="
         }
       },
       "is_incremental": false,
@@ -522,7 +534,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "LlATLZHoYvrq5VtyJPoq2w=="
+          "hash": "U/tLmpNE5BVOcNI28/NhJg=="
         }
       },
       "is_incremental": false,
@@ -544,23 +556,25 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 2
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 40,
-          "skipped_file_count": 40
+          "total_file_count": 41,
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

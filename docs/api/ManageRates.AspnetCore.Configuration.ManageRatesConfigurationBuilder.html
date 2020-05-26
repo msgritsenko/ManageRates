@@ -127,7 +127,7 @@
     <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder__ctor.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L12">View Source</a>
+    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L13">View Source</a>
   </span>
   <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder__ctor_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.#ctor*"></a>
   <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder__ctor" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.#ctor">ManageRatesConfigurationBuilder()</h4>
@@ -141,18 +141,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRates_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRates(System.String%2CSystem.Int32%2CManageRates.Core.Model.RatesStrictPeriod)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate_.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String%2CManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L17">View Source</a>
+    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L61">View Source</a>
   </span>
-  <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRates_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRates*"></a>
-  <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRates_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRates(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod)">AddManageRates(String, Int32, RatesStrictPeriod)</h4>
+  <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy*"></a>
+  <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)">AddNamedPolicy(String, HttpManageRatePolicy.PolicyDelegate)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManageRatesConfigurationBuilder AddManageRates(string pattern, int count, RatesStrictPeriod period)</code></pre>
+    <pre><code class="lang-csharp hljs">public ManageRatesConfigurationBuilder AddNamedPolicy(string policyName, HttpManageRatePolicy.PolicyDelegate policyDelegate)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,64 +166,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">pattern</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">count</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="ManageRates.Core.Model.RatesStrictPeriod.html">RatesStrictPeriod</a></td>
-        <td><span class="parametername">period</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html">ManageRatesConfigurationBuilder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByDelegate_System_String_ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate_.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByDelegate(System.String%2CManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L41">View Source</a>
-  </span>
-  <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByDelegate_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByDelegate*"></a>
-  <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByDelegate_System_String_ManageRates_AspnetCore_HttpManageRatePolicy_PolicyDelegate_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByDelegate(System.String,ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate)">AddManageRatesByDelegate(String, HttpManageRatePolicy.PolicyDelegate)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManageRatesConfigurationBuilder AddManageRatesByDelegate(string pattern, HttpManageRatePolicy.PolicyDelegate policyDelegate)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">pattern</span></td>
+        <td><span class="parametername">policyName</span></td>
         <td></td>
       </tr>
       <tr>
@@ -250,18 +193,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByIp_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByIp(System.String%2CSystem.Int32%2CManageRates.Core.Model.RatesStrictPeriod)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyExtractorDelegate_.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String%2CSystem.Int32%2CManageRates.Core.Model.Period%2CManageRates.AspnetCore.KeyExtractorDelegate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L25">View Source</a>
+    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L52">View Source</a>
   </span>
-  <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByIp_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByIp*"></a>
-  <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByIp_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByIp(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod)">AddManageRatesByIp(String, Int32, RatesStrictPeriod)</h4>
+  <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy*"></a>
+  <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyExtractorDelegate_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyExtractorDelegate)">AddNamedPolicy(String, Int32, Period, KeyExtractorDelegate)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManageRatesConfigurationBuilder AddManageRatesByIp(string pattern, int count, RatesStrictPeriod period)</code></pre>
+    <pre><code class="lang-csharp hljs">public ManageRatesConfigurationBuilder AddNamedPolicy(string policyName, int count, Period period, KeyExtractorDelegate keyExtractor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -275,7 +218,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">pattern</span></td>
+        <td><span class="parametername">policyName</span></td>
         <td></td>
       </tr>
       <tr>
@@ -284,8 +227,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="ManageRates.Core.Model.RatesStrictPeriod.html">RatesStrictPeriod</a></td>
+        <td><a class="xref" href="ManageRates.Core.Model.Period.html">Period</a></td>
         <td><span class="parametername">period</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ManageRates.AspnetCore.KeyExtractorDelegate.html">KeyExtractorDelegate</a></td>
+        <td><span class="parametername">keyExtractor</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -307,18 +255,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByUser_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByUser(System.String%2CSystem.Int32%2CManageRates.Core.Model.RatesStrictPeriod)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String%2CSystem.Int32%2CManageRates.Core.Model.Period%2CManageRates.AspnetCore.KeyType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L33">View Source</a>
+    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L43">View Source</a>
   </span>
-  <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByUser_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByUser*"></a>
-  <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddManageRatesByUser_System_String_System_Int32_ManageRates_Core_Model_RatesStrictPeriod_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddManageRatesByUser(System.String,System.Int32,ManageRates.Core.Model.RatesStrictPeriod)">AddManageRatesByUser(String, Int32, RatesStrictPeriod)</h4>
+  <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy*"></a>
+  <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)">AddNamedPolicy(String, Int32, Period, KeyType)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManageRatesConfigurationBuilder AddManageRatesByUser(string pattern, int count, RatesStrictPeriod period)</code></pre>
+    <pre><code class="lang-csharp hljs">public ManageRatesConfigurationBuilder AddNamedPolicy(string policyName, int count, Period period, KeyType stricType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,7 +280,7 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">pattern</span></td>
+        <td><span class="parametername">policyName</span></td>
         <td></td>
       </tr>
       <tr>
@@ -341,9 +289,148 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="ManageRates.Core.Model.RatesStrictPeriod.html">RatesStrictPeriod</a></td>
+        <td><a class="xref" href="ManageRates.Core.Model.Period.html">Period</a></td>
         <td><span class="parametername">period</span></td>
         <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ManageRates.AspnetCore.KeyType.html">KeyType</a></td>
+        <td><span class="parametername">stricType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html">ManageRatesConfigurationBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String%2CSystem.String%2CSystem.Int32%2CManageRates.Core.Model.Period%2CManageRates.AspnetCore.KeyType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L34">View Source</a>
+  </span>
+  <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy*"></a>
+  <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddNamedPolicy_System_String_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddNamedPolicy(System.String,System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)">AddNamedPolicy(String, String, Int32, Period, KeyType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ManageRatesConfigurationBuilder AddNamedPolicy(string policyName, string endpointPathPattern, int count, Period period, KeyType stricType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">policyName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">endpointPathPattern</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ManageRates.Core.Model.Period.html">Period</a></td>
+        <td><span class="parametername">period</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ManageRates.AspnetCore.KeyType.html">KeyType</a></td>
+        <td><span class="parametername">stricType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.html">ManageRatesConfigurationBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddPolicy_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddPolicy(System.String%2CSystem.Int32%2CManageRates.Core.Model.Period%2CManageRates.AspnetCore.KeyType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L26">View Source</a>
+  </span>
+  <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddPolicy_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddPolicy*"></a>
+  <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_AddPolicy_System_String_System_Int32_ManageRates_Core_Model_Period_ManageRates_AspnetCore_KeyType_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.AddPolicy(System.String,System.Int32,ManageRates.Core.Model.Period,ManageRates.AspnetCore.KeyType)">AddPolicy(String, Int32, Period, KeyType)</h4>
+  <div class="markdown level1 summary"><p>Add policy witch catches request with request patrh meets <code data-dev-comment-type="paramref" class="paramref">endpointPathPattern</code> of <span class="xref">System.Text.RegularExpressions.Regex</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ManageRatesConfigurationBuilder AddPolicy(string endpointPathPattern, int count, Period period, KeyType stricType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">endpointPathPattern</span></td>
+        <td><p>Regex pattern with <span class="xref">System.Text.RegularExpressions.RegexOptions.IgnoreCase</span> and <span class="xref">System.Text.RegularExpressions.RegexOptions.Compiled</span> options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td><p>Allowed rate count in <code data-dev-comment-type="paramref" class="paramref">period</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ManageRates.Core.Model.Period.html">Period</a></td>
+        <td><span class="parametername">period</span></td>
+        <td><p>Restriction period.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ManageRates.AspnetCore.KeyType.html">KeyType</a></td>
+        <td><span class="parametername">stricType</span></td>
+        <td><p><a class="xref" href="ManageRates.AspnetCore.KeyType.html">KeyType</a> to distinguish rates.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -367,7 +454,7 @@
     <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_Build.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L50">View Source</a>
+    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L71">View Source</a>
   </span>
   <a id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_Build_" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.Build*"></a>
   <h4 id="ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder_Build" data-uid="ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder.Build">Build()</h4>
@@ -403,7 +490,7 @@
                     <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_Configuration_ManageRatesConfigurationBuilder.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.Configuration.ManageRatesConfigurationBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/Configuration/ManageRatesConfigurationBuilder.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

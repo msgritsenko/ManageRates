@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace ManageRates.AspnetCore
+    <title>Delegate KeyExtractorDelegate
    | docfx seed website </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace ManageRates.AspnetCore
+    <meta name="title" content="Delegate KeyExtractorDelegate
    | docfx seed website ">
     <meta name="generator" content="docfx 2.53.1.0">
     
@@ -78,37 +78,51 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ManageRates.AspnetCore">
+            <article class="content wrap" id="_content" data-uid="ManageRates.AspnetCore.KeyExtractorDelegate">
   
-  <h1 id="ManageRates_AspnetCore" data-uid="ManageRates.AspnetCore" class="text-break">Namespace ManageRates.AspnetCore
+  
+  <h1 id="ManageRates_AspnetCore_KeyExtractorDelegate" data-uid="ManageRates.AspnetCore.KeyExtractorDelegate" class="text-break">Delegate KeyExtractorDelegate
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="ManageRates.AspnetCore.HttpManageRatePolicy.html">HttpManageRatePolicy</a></h4>
-      <section><p>Implementations of <a class="xref" href="ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.html">IHttpManageRatePolicy</a> with delegate policy resolver.</p>
-</section>
-      <h4><a class="xref" href="ManageRates.AspnetCore.HttpManageRatePolicyBuilder.html">HttpManageRatePolicyBuilder</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ManageRates.AspnetCore.ManageRatesMiddleware.html">ManageRatesMiddleware</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ManageRates.AspnetCore.ManageRatesService.html">ManageRatesService</a></h4>
-      <section><p>Object wich manipulates context to privide limit of rate.</p>
-</section>
-    <h3 id="enums">Enums
-  </h3>
-      <h4><a class="xref" href="ManageRates.AspnetCore.KeyType.html">KeyType</a></h4>
-      <section></section>
-    <h3 id="delegates">Delegates
-  </h3>
-      <h4><a class="xref" href="ManageRates.AspnetCore.HttpManageRatePolicy.AcceptDelegate.html">HttpManageRatePolicy.AcceptDelegate</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate.html">HttpManageRatePolicy.PolicyDelegate</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ManageRates.AspnetCore.KeyExtractorDelegate.html">KeyExtractorDelegate</a></h4>
-      <section></section>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ManageRates.AspnetCore.html">ManageRates.AspnetCore</a></h6>
+  <h6><strong>Assembly</strong>: ManageRates.AspnetCore.dll</h6>
+  <h5 id="ManageRates_AspnetCore_KeyExtractorDelegate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate string KeyExtractorDelegate(HttpContext context);</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Http.HttpContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -116,6 +130,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/msgritsenko/ManageRates/new/master/apiSpec/new?filename=ManageRates_AspnetCore_KeyExtractorDelegate.md&amp;value=---%0Auid%3A%20ManageRates.AspnetCore.KeyExtractorDelegate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/msgritsenko/ManageRates/blob/master/src/ManageRates.AspnetCore/src/HttpManageRatePolicyBuilder.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
