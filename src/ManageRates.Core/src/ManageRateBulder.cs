@@ -28,7 +28,7 @@ namespace ManageRates.Core
         /// <param name="rateCount">Max rate in strict period.</param>
         /// <param name="ratePeriod">Predefined striction type period.</param>
         /// <returns></returns>
-        public static IKeyedManageRatePolicy BuildKeyedDefaultPolicy(int rateCount, RatesStrictPeriod ratePeriod)
+        public static IKeyedManageRatePolicy BuildKeyedDefaultPolicy(int rateCount, Period ratePeriod)
         {
             return BuildKeyedDefaultPolicy(rateCount, ratePeriod.ToTimeSpan());
         }
@@ -50,7 +50,7 @@ namespace ManageRates.Core
         /// <param name="ratePeriod">Predefined striction type period.</param>
         /// <param name="rateCount">Max rate in strict period.</param>
         /// <returns></returns>
-        public static IManageRatePolicy BuildDefaultPolicy(RatesStrictPeriod ratePeriod, int rateCount)
+        public static IManageRatePolicy BuildDefaultPolicy(Period ratePeriod, int rateCount)
         {
             return BuildDefaultPolicy(ratePeriod.ToTimeSpan(), rateCount);
         }

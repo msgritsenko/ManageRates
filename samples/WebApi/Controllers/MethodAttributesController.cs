@@ -14,7 +14,7 @@ namespace WebApi.Controllers
     {
         // <endpoint_attribute_sample>
         [HttpGet]
-        [ManageRate(2, RatesStrictPeriod.Second, RatesStricType.Endpoint)]
+        [ManageRate(2, Period.Second, KeyType.RequestPath)]
         public string Endpoint()
         {
             return nameof(Endpoint);
@@ -22,17 +22,25 @@ namespace WebApi.Controllers
         // </endpoint_attribute_sample>
 
         [HttpGet]
-        [ManageRate(2, RatesStrictPeriod.Second, RatesStricType.User)]
+        [ManageRate(2, Period.Second, KeyType.User)]
         public new string User()
         {
             return nameof(User);
         }
 
         [HttpGet]
-        [ManageRate(2, RatesStrictPeriod.Second, RatesStricType.Ip)]
+        [ManageRate(2, Period.Second, KeyType.Ip)]
         public string Ip()
         {
             return nameof(Ip);
         }
+
+        [HttpGet]
+        [ManageRate("NoMore10PerSecond")]
+        public string NamedPolicy()
+        {
+            return nameof(NamedPolicy);
+        }
+
     }
 }

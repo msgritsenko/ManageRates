@@ -30,9 +30,14 @@ namespace ManageRates.AspnetCore
             var endpoint = context.GetEndpoint();
 
             var policy = endpoint?.Metadata.GetMetadata<IHttpManageRatePolicy>();
+
             if (policy != null)
             {
-                return policy.IsPermitted(context, _timeService, _memoryCache);
+                if (!string.IsNullOrEmpty(policy.ReferenceName))
+                    policy = policies?.Policies?.FirstOrDefault(p => policy.ReferenceName.Equals(p.Name));
+
+                if (policy != null)
+                    return policy.IsPermitted(context, _timeService, _memoryCache);
             }
 
             policy = policies?.Policies.FirstOrDefault(p => p.Accept(context));

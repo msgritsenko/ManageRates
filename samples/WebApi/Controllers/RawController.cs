@@ -2,6 +2,9 @@
 
 namespace WebApi.Controllers
 {
+    /// <summary>
+    /// Rate management for this controller is configured outside, in <see cref="Startup"/> class.
+    /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class RawController : ControllerBase

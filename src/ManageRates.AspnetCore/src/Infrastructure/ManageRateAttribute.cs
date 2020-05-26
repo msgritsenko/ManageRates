@@ -10,15 +10,33 @@ namespace ManageRates.AspnetCore.Infrastructure
     /// <summary>
     /// Special User rate striction attribute.
     /// </summary>
-    /// <remarks>Just only as a short version of <see cref="EndpointManageRateAttribute"/>.</remarks>
     public class ManageRateAttribute : Attribute, IHttpManageRatePolicy
     {
+        /// <summary>
+        /// Of course we don't implement policy logic in each component, we will use stardard.
+        /// </summary>
         private readonly IHttpManageRatePolicy _policy;
 
-        public ManageRateAttribute(int count, RatesStrictPeriod period, RatesStricType strictType)
+        /// <summary>
+        /// Creates individual policy with particular charecteristics.
+        /// </summary>
+        public ManageRateAttribute(int count, Period period, KeyType keyType)
         {
-            _policy = HttpManageRatePolicyBuilder.Build(count, period, strictType);
+            _policy = HttpManageRatePolicyBuilder.Build(count, period, keyType);
         }
+
+        /// <summary>
+        /// Create attribute contains reference to named policy.
+        /// </summary>
+        /// <param name="policyName">Name of the named policy.</param>
+        public ManageRateAttribute(string policyName)
+        {
+            ReferenceName = policyName;
+        }
+
+        public string Name { get; set; }
+
+        public string ReferenceName { get; }
 
         /// <inheritdoc/>
         public bool Accept(HttpContext context) => _policy.Accept(context);

@@ -11,11 +11,23 @@ namespace Microsoft.Extensions.DependencyInjection
     /// </summary>
     public static class ManageRatesApplicationBuilderExtensions
     {
+        /// <summary>
+        /// Add manage rates middleware.
+        /// </summary>
+        /// <param name="app"></param>
+        /// <returns></returns>
         public static IApplicationBuilder UseManageRates(this IApplicationBuilder app)
         {
             return app.UseManageRates(b => { });
         }
 
+
+        /// <summary>
+        /// Add manage rates middleware and setup set of manage rate policies.
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="policyBuilder">Action of <see cref="ManageRatesConfigurationBuilder"/> to configure set of policies.</param>
+        /// <returns></returns>
         public static IApplicationBuilder UseManageRates(this IApplicationBuilder app, Action<ManageRatesConfigurationBuilder> policyBuilder)
         {
             if (app.ApplicationServices.GetService(typeof(IManageRatesService)) == null)

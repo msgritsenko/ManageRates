@@ -10,14 +10,23 @@ namespace ManageRates.AspnetCore.Builder
     /// </summary>
     public static class ManageRatesEndpointRouteBuilderExtensions
     {
-
         public static TBuilder ManageRates<TBuilder>(
             this TBuilder builder,
             int count,
-            RatesStrictPeriod period,
-            RatesStricType strictType) where TBuilder : IEndpointConventionBuilder
+            Period period,
+            KeyType keyType) where TBuilder : IEndpointConventionBuilder
         {
-            IHttpManageRatePolicy policy = HttpManageRatePolicyBuilder.Build(count, period, strictType);
+            IHttpManageRatePolicy policy = HttpManageRatePolicyBuilder.Build(count, period, keyType);
+            builder.Add(endpointBuilder => endpointBuilder.Metadata.Add(policy));
+
+            return builder;
+        }
+
+        public static TBuilder ManageRates<TBuilder>(
+            this TBuilder builder,
+            string policyName) where TBuilder : IEndpointConventionBuilder
+        {
+            IHttpManageRatePolicy policy = HttpManageRatePolicyBuilder.Build(policyName);
             builder.Add(endpointBuilder => endpointBuilder.Metadata.Add(policy));
 
             return builder;

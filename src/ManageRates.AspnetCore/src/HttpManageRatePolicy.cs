@@ -18,6 +18,9 @@ namespace ManageRates.AspnetCore
         private readonly PolicyDelegate _policy;
         private readonly AcceptDelegate _accept;
 
+        public string Name { get; set; }
+        public string ReferenceName { get; set; }
+
         public HttpManageRatePolicy(PolicyDelegate policy)
         {
             _policy = policy;

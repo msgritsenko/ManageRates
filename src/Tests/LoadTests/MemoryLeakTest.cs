@@ -53,7 +53,7 @@ namespace Load.Tests
 
         [Trait("Category", "LongRunning")]
         [Fact]
-        public async Task TestWith10Threads_1hour_CheckMaxMemory()
+        public void TestWith10Threads_1hour_CheckMaxMemory()
         {
             var endpoints = _testEndpoints.Keys.ToList();
             int maxIndex = endpoints.Count;
@@ -82,8 +82,6 @@ namespace Load.Tests
 
                 Assert.True(supportedResult);
             });
-
-
         }
 
 

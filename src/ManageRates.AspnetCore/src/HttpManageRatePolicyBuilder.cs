@@ -10,34 +10,39 @@ using static ManageRates.AspnetCore.HttpManageRatePolicy;
 
 namespace ManageRates.AspnetCore
 {
-    /// <summary>
-    /// Predefined types of manage rate policy.
-    /// </summary>
-    public enum RatesStricType
-    {
-        None,
-        Endpoint,
-        User,
-        Ip
-    }
+    public delegate string KeyExtractorDelegate(HttpContext context);
 
     public static class HttpManageRatePolicyBuilder
     {
-        private delegate string KeyExtractorDelegate(HttpContext context);
 
-        public static IHttpManageRatePolicy Build(int count, RatesStrictPeriod period, RatesStricType strictType)
+        public static IHttpManageRatePolicy WithName(this IHttpManageRatePolicy policy, string name)
         {
-            PolicyDelegate policy = BuildDelegate(count, period, strictType);
+            policy.Name = name;
+            return policy;
+        }
+
+        public static IHttpManageRatePolicy Build(string name)
+        {
+            var policy = new HttpManageRatePolicy(null);
+            policy.ReferenceName = name;
+
+            return policy;
+        }
+
+        public static IHttpManageRatePolicy Build(int count, Period period, KeyType keyType)
+        {
+            PolicyDelegate policy = BuildKeyExtractorDelegate(count, period, keyType);
 
             return Build(policy);
         }
 
-        public static IHttpManageRatePolicy Build(string pattern, int count, RatesStrictPeriod period, RatesStricType strictType)
+        public static IHttpManageRatePolicy Build(string pattern, int count, Period period, KeyType keyType)
         {
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
-            return Build(regex, count, period, strictType);
+            return Build(regex, count, period, keyType);
         }
+
         public static IHttpManageRatePolicy Build(string pattern, PolicyDelegate policy)
         {
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled);
@@ -45,9 +50,9 @@ namespace ManageRates.AspnetCore
             return Build(regex, policy);
         }
 
-        public static IHttpManageRatePolicy Build(Regex regex, int count, RatesStrictPeriod period, RatesStricType strictType)
+        public static IHttpManageRatePolicy Build(Regex regex, int count, Period period, KeyType keyType)
         {
-            PolicyDelegate policy = BuildDelegate(count, period, strictType);
+            PolicyDelegate policy = BuildKeyExtractorDelegate(count, period, keyType);
             AcceptDelegate accept = (context) => regex.IsMatch(EndpoinExtractor(context));
 
             return Build(policy, accept);
@@ -67,23 +72,43 @@ namespace ManageRates.AspnetCore
             return new HttpManageRatePolicy(policy);
         }
 
-        private static PolicyDelegate BuildDelegate(int count, RatesStrictPeriod period, RatesStricType strictType)
+        public static IHttpManageRatePolicy Build(KeyExtractorDelegate keyExtractor, int count, Period period)
+        {
+            var keyedPolicy = new KeyedTimeRatePolicy(count, period.ToTimeSpan());
+
+            PolicyDelegate policy = KeyedPolicyBuilder(keyExtractor, keyedPolicy);
+
+            return new HttpManageRatePolicy(policy);
+        }
+        public static IHttpManageRatePolicy Build(string pattern, KeyExtractorDelegate keyExtractor, int count, Period period)
+        {
+            var keyedPolicy = new KeyedTimeRatePolicy(count, period.ToTimeSpan());
+
+            PolicyDelegate policy = KeyedPolicyBuilder(keyExtractor, keyedPolicy);
+
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled);
+            AcceptDelegate accept = (context) => regex.IsMatch(EndpoinExtractor(context));
+
+            return new HttpManageRatePolicy(policy, accept);
+        }
+
+        private static PolicyDelegate BuildKeyExtractorDelegate(int count, Period period, KeyType keyType)
         {
             PolicyDelegate policy;
 
             var keyedPolicy = new KeyedTimeRatePolicy(count, period.ToTimeSpan());
-            switch (strictType)
+            switch (keyType)
             {
-                case RatesStricType.None:
+                case KeyType.None:
                     policy = KeyedPolicyBuilder(x => "", keyedPolicy);
                     break;
-                case RatesStricType.Endpoint:
+                case KeyType.RequestPath:
                     policy = KeyedPolicyBuilder(EndpoinExtractor, keyedPolicy);
                     break;
-                case RatesStricType.User:
+                case KeyType.User:
                     policy = KeyedPolicyBuilder(UserExtractor, keyedPolicy);
                     break;
-                case RatesStricType.Ip:
+                case KeyType.Ip:
                     policy = KeyedPolicyBuilder(IpExtractor, keyedPolicy);
                     break;
 
@@ -93,6 +118,7 @@ namespace ManageRates.AspnetCore
 
             return policy;
         }
+
 
         private static PolicyDelegate KeyedPolicyBuilder(KeyExtractorDelegate keyExtractor, IKeyedManageRatePolicy _keyedPolicy)
         {

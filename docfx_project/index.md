@@ -25,7 +25,7 @@ PM> Install-Package ManageRates.AspnetCore
 #### Controller action restriction
 
 Firstly we need to regitster neccessary services:
-[!code-csharp[Main](../samples/WebApi/Startup.cs?name=setup_middleware&highlight=8 "Register services")]
+[!code-csharp[Main](../samples/WebApi/Startup.cs?name=configure_services&highlight=8 "Register services")]
 and add the middleware:
 [!code-csharp[Main](../samples/WebApi/Startup.cs?range=35-36,43,45,47,56-57,70-72&highlight=5 "Add middleware")]
 
@@ -36,7 +36,7 @@ Finally, we can use attribute on action of a controller to restrinct it's usage:
 #### Restriction set of endpoints
 
 Firstly we need to regitster neccessary services:
-[!code-csharp[Main](../samples/WebApi/Startup.cs?name=setup_middleware&highlight=8 "Register services")]
+[!code-csharp[Main](../samples/WebApi/Startup.cs?name=configure_services&highlight=8 "Register services")]
 
 Then we can add the middleware where we describe set of endpoints by regular expression:
 [!code-csharp[Main](../samples/WebApi/Startup.cs?range=35-36,43,49-50,54,56-57,70-72&highlight=4-6 "Add middleware")]
@@ -44,7 +44,7 @@ Then we can add the middleware where we describe set of endpoints by regular exp
 #### Add restriction functionality during endpoint configuration:
 
 Firstly we need to regitster neccessary services:
-[!code-csharp[Main](../samples/WebApi/Startup.cs?name=setup_middleware&highlight=8 "Register services")]
+[!code-csharp[Main](../samples/WebApi/Startup.cs?name=configure_services&highlight=8 "Register services")]
 
 Then we can add the middleware where we describe set of endpoints by regular expression:
 [!code-csharp[Main](../samples/WebApi/Startup.cs?range=35-36,43,56-59,70-72&highlight=7 "Add middleware")]

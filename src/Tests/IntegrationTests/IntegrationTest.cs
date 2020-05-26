@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Security.Principal;
 using System.Threading.Tasks;
@@ -33,7 +34,9 @@ namespace Integration.Tests
         }
 
         [Theory]
-        [InlineData("/ControllerAttribute")]
+        [InlineData("/ControllerAttribute/index1")]
+        [InlineData("/ControllerAttribute/index2")]
+        [InlineData("/ControllerAttribute/index3")]
         [InlineData("/MethodAttributes/endpoint")]
         [InlineData("/endpoint")]
         public async Task TestTwoTimesPerSecondEndpoints(string endpoint)
@@ -129,6 +132,60 @@ namespace Integration.Tests
 
             _timeServiceMock.Reset();
         }
+
+        [Fact]
+        public async Task TestkThreeTimesPerSecond_NamedPolicyWithOwnKeyExtractor()
+        {
+            _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
+            var server = _factory.Server;
+
+            var answers = new[]
+            {
+                StatusCodes.Status200OK,
+                StatusCodes.Status200OK,
+                StatusCodes.Status200OK,
+                StatusCodes.Status429TooManyRequests
+            };
+
+            foreach (var answer in answers)
+            {
+                var response = await server.SendAsync(context =>
+                {
+                    context.Request.Path = "/header";
+                    context.Request.Method = HttpMethods.Get;
+                    //context.Request.Headers.Add("X-userId", "22");
+                });
+
+                Assert.Equal(answer, response.Response.StatusCode);
+            }
+
+            _timeServiceMock.Reset();
+        }
+
+        [Fact]
+        public async Task TestkNamedPolicyEndpoints()
+        {
+            _timeServiceMock.Setup(t => t.GetUTC()).Returns(_baseTime);
+            using var client = _factory.CreateClient();
+
+            var testsResult = new Dictionary<HttpStatusCode, int>();
+            testsResult.Add(HttpStatusCode.OK, 0);
+            testsResult.Add(HttpStatusCode.TooManyRequests, 0);
+
+            for (int i = 0; i < 12; ++i)
+            {
+                string endpoint = (i % 2 == 0) ? "/namedpolicy" : "/MethodAttributes/NamedPolicy";
+                var response = await client.GetAsync(endpoint);
+
+                testsResult[response.StatusCode]++;
+            }
+
+            Assert.Equal(10, testsResult[HttpStatusCode.OK]);
+            Assert.Equal(2, testsResult[HttpStatusCode.TooManyRequests]);
+
+            _timeServiceMock.Reset();
+        }
+
 
         [Fact]
         public async Task TestBlockedByDelegate()

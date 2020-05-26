@@ -21,5 +21,17 @@ namespace ManageRates.AspnetCore.Abstractions
         /// Decides by <paramref name="context"/> is the resource permitted.
         /// </summary>
         public ManageRatesResult IsPermitted(HttpContext context, ITimeService timeService, IMemoryCache memoryCache);
+
+        /// <summary>
+        /// Name if it is the named policy.
+        /// </summary>
+        /// <remarks>Next versions will fix this incapsulation problem</remarks>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Name of the policy that should be used instead of this one.
+        /// </summary>
+        /// /// <remarks>Next versions will fix this incapsulation problem</remarks>
+        public string ReferenceName { get; }
     }
 }

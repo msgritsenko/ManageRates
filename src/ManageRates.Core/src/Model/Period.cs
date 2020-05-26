@@ -3,7 +3,7 @@
     /// <summary>
     /// Supported restrict periods.
     /// </summary>
-    public enum RatesStrictPeriod
+    public enum Period
     {
         /// <summary>
         /// Empty strict period.
