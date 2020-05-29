@@ -17,7 +17,7 @@ ManageRates is an open-source and cross-platform framework for managing throttli
 Please, visit https://msgritsenko.github.io/ManageRates/ to get all information about the project.
 
 ## Efficiency 
-Test of throttling. There is a log of work to this component it I want it works correctly.
+Test of throttling. There is a lot of work to this component if I want it works correctly.
 ![efficiency fisualization](./docfx_project/articles/images/efficiency.png)
 
 ## License
