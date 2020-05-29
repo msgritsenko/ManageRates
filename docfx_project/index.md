@@ -19,6 +19,9 @@ To install ManageRates packange, run the following command in the Nuget Package 
 ```
 PM> Install-Package ManageRates.AspnetCore
 ```
+## Efficiency 
+Test of throttling. There is a log of work to this component it I want it works correctly.
+![efficiency fisualization](./articles/images/efficiency.png)
 
 ## Samples
 

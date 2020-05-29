@@ -13,6 +13,17 @@
       "is_incremental": false
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/images/efficiency.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/images/efficiency.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
@@ -30,7 +41,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "VnwKEMLKLXGhpcTJ0rFPZA=="
+          "hash": "BypcXZuMT3cri34tI3EJ6A=="
         }
       },
       "is_incremental": false,
@@ -42,7 +53,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.html",
-          "hash": "j3c1KMzfZBM8fNYLcmg5vA=="
+          "hash": "ZfSWl9QXHmgLbWehhknSTQ=="
         }
       },
       "is_incremental": false,
@@ -54,7 +65,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Abstractions.IManageRatesService.html",
-          "hash": "3dEBWJQhJDyOurJF1nyHDA=="
+          "hash": "AfJ8tKhXX34PXgWX7anLWA=="
         }
       },
       "is_incremental": false,
@@ -138,7 +149,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.AcceptDelegate.html",
-          "hash": "wZw/xFWHxYCKOdJS2MQaUg=="
+          "hash": "Zs2+GpeiWNt0h7V2DM4nkw=="
         }
       },
       "is_incremental": false,
@@ -150,7 +161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate.html",
-          "hash": "upkChbQbt3dYs/mWAjfkgA=="
+          "hash": "En61p6DxwCrZYdTqSpG5mg=="
         }
       },
       "is_incremental": false,
@@ -162,7 +173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.html",
-          "hash": "tGzrfNvpbKqFyyolphheAw=="
+          "hash": "bINjRRJVFv9HfaVN/CH6vQ=="
         }
       },
       "is_incremental": false,
@@ -186,7 +197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html",
-          "hash": "8QxDbf8RUFbikMwZuVKQRQ=="
+          "hash": "+tYHe+v28+ICHOVnVYqtmQ=="
         }
       },
       "is_incremental": false,
@@ -210,7 +221,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.KeyExtractorDelegate.html",
-          "hash": "6PW3q5D8ibBswYONauWuqQ=="
+          "hash": "VXEs0Zs2WwOn6HBn6yxP6w=="
         }
       },
       "is_incremental": false,
@@ -222,7 +233,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.KeyType.html",
-          "hash": "LXvhzIVI41TvLK8zxwsx3Q=="
+          "hash": "xipzoSG4JCH+YNKMaJCiAA=="
         }
       },
       "is_incremental": false,
@@ -234,7 +245,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.ManageRatesMiddleware.html",
-          "hash": "T7LDyDc2x4i2himu20/roA=="
+          "hash": "PsUIi2yf+ytIokiQafg0bQ=="
         }
       },
       "is_incremental": false,
@@ -246,7 +257,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.ManageRatesService.html",
-          "hash": "PLVDHlt7D+1051YNdKKRBw=="
+          "hash": "U6B/9fasSnnf7GteESYAlg=="
         }
       },
       "is_incremental": false,
@@ -498,7 +509,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.ManageRatesApplicationBuilderExtensions.html",
-          "hash": "ZkybJhK6kLWUncT8IS+Y2w=="
+          "hash": "llCU78I/VUB+yPtijWhsIw=="
         }
       },
       "is_incremental": false,
@@ -510,7 +521,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.ManageRatesServiceCollectionExtensions.html",
-          "hash": "ukFGVDdlSyyT6tXYnfnvFg=="
+          "hash": "MmFL6MdxSuz4hs3WcOq5Ug=="
         }
       },
       "is_incremental": false,
@@ -522,7 +533,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.html",
-          "hash": "9sewpWMWPi55O50kUVNGNw=="
+          "hash": "SrWVoX7nGtwfQ6BArGD/Ag=="
         }
       },
       "is_incremental": false,
@@ -574,6 +585,13 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 41,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

@@ -16,6 +16,10 @@ ManageRates is an open-source and cross-platform framework for managing throttli
 ## Documentation
 Please, visit https://msgritsenko.github.io/ManageRates/ to get all information about the project.
 
+## Efficiency 
+Test of throttling. There is a log of work to this component it I want it works correctly.
+![efficiency fisualization](./docfx_project/articles/images/efficiency.png)
+
 ## License
 
 ManageRates.AspnetCore licensed under the [MIT License](https://raw.githubusercontent.com/msgritsenko/ManageRates/master/LICENSE).
