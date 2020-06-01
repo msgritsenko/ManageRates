@@ -30,7 +30,7 @@ Test of throttling. There is a log of work to this component it I want it works 
 Firstly we need to regitster neccessary services:
 [!code-csharp[Main](../samples/WebApi/Startup.cs?name=configure_services&highlight=8 "Register services")]
 and add the middleware:
-[!code-csharp[Main](../samples/WebApi/Startup.cs?range=35-36,43,45,47,56-57,70-72&highlight=5 "Add middleware")]
+[!code-csharp[Main](../samples/WebApi/Startup.cs?range=35-36,43-44,47,58-60,79-81&highlight=5 "Add middleware")]
 
 Finally, we can use attribute on action of a controller to restrinct it's usage:
 [!code-csharp[Main](../samples/WebApi/Controllers/MethodAttributesController.cs?name=endpoint_attribute_sample&highlight=2 "Use EndpointManageRateAttribute")]
@@ -42,7 +42,7 @@ Firstly we need to regitster neccessary services:
 [!code-csharp[Main](../samples/WebApi/Startup.cs?name=configure_services&highlight=8 "Register services")]
 
 Then we can add the middleware where we describe set of endpoints by regular expression:
-[!code-csharp[Main](../samples/WebApi/Startup.cs?range=35-36,43,49-50,54,56-57,70-72&highlight=4-6 "Add middleware")]
+[!code-csharp[Main](../samples/WebApi/Startup.cs?range=35-36,43,49-50,57,59-60,79-81&highlight=4-6 "Add middleware")]
 
 #### Add restriction functionality during endpoint configuration:
 
@@ -50,7 +50,7 @@ Firstly we need to regitster neccessary services:
 [!code-csharp[Main](../samples/WebApi/Startup.cs?name=configure_services&highlight=8 "Register services")]
 
 Then we can add the middleware where we describe set of endpoints by regular expression:
-[!code-csharp[Main](../samples/WebApi/Startup.cs?range=35-36,43,56-59,70-72&highlight=7 "Add middleware")]
+[!code-csharp[Main](../samples/WebApi/Startup.cs?range=35-36,43,59-62,79-81&highlight=7 "Add middleware")]
 
 ## Benchmark results
 

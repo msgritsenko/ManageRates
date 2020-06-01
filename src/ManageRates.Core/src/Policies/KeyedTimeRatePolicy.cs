@@ -29,11 +29,17 @@ namespace ManageRates.Core.Policies
         /// <inheritdoc/>
         public bool IsPermitted(string key, ITimeService timeService, IMemoryCache memoryCache)
         {
-            var timeQueue = memoryCache.GetOrCreate(key, cacheEntry =>
+            Queue<DateTime>? timeQueue = null;
+
+            // temporary solution of the multighreading problem (see Efficiency image)
+            lock (memoryCache)
             {
-                cacheEntry.SlidingExpiration = _ratePeriod;
-                return new Queue<DateTime>(_rateCount);
-            });
+                timeQueue = memoryCache.GetOrCreate(key, cacheEntry =>
+                {
+                    cacheEntry.SlidingExpiration = _ratePeriod;
+                    return new Queue<DateTime>(_rateCount);
+                });
+            }
 
             lock (timeQueue)
             {
