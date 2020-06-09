@@ -1,0 +1,56 @@
+{
+  "title": "Explore main parts of repository",
+  "steps": [
+    {
+      "file": "src/ManageRates.Core/src/ManageRates.Core.csproj",
+      "line": 1,
+      "description": "This project is primary throtling functionality - interfaces and implementations."
+    },
+    {
+      "file": "src/ManageRates.AspnetCore/src/ManageRates.AspnetCore.csproj",
+      "line": 1,
+      "description": "This project is the banch of classes to implement throttling in asp.net core applications."
+    },
+    {
+      "file": "samples/WebApi/Startup.cs",
+      "line": 30,
+      "description": "This is how you can add neccessary services to DI container."
+    },
+    {
+      "file": "samples/WebApi/Startup.cs",
+      "line": 49,
+      "description": "There is a banch of different samples of how to implement throtling into request processing pipeline."
+    },
+    {
+      "file": "docs/index.html",
+      "line": 1,
+      "description": "This file is a entry point for all documentation of the project."
+    },
+    {
+      "file": "docfx_project/docfx.json",
+      "line": 1,
+      "description": "This file is a configuration for the documentation project. This project is made with docFX functionality and uses real source code for building samples. How it works you can see in the next step."
+    },
+    {
+      "file": "docfx_project/index.md",
+      "line": 31,
+      "description": "This is one of the way to inject source code into your documentation. There are a lot of other ways, some of them are used later in this file."
+    },
+    {
+      "file": "docfx_project/build.ps1",
+      "line": 1,
+      "description": "This powershell file setup steps for building documentation:\r\n- runs benchmarks\r\n- runs calculation of efficiency\r\nand so on..."
+    },
+    {
+      "file": "appveyor.yml",
+      "line": 1,
+      "description": "At the moment we use appveyor as CI service, it can use yaml file as a configuration, so we did it!"
+    },
+    {
+      "file": "LICENSE",
+      "line": 1,
+      "description": "Congratulations! You've finished exploring of this repository and you know almost all about it!"
+    }
+  ],
+  "ref": "master"
+}
