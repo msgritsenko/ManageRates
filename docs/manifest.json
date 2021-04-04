@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/ManageRates/docfx_project",
+  "source_base_path": "D:/OwnProjects/ManageRates/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -41,7 +41,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "m+tDn6y3GQ8+LOKdiJ42vA=="
+          "hash": "NHJ/u6QOsjY1NzrjqD/L0g=="
         }
       },
       "is_incremental": false,
@@ -53,7 +53,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Abstractions.IHttpManageRatePolicy.html",
-          "hash": "ZfSWl9QXHmgLbWehhknSTQ=="
+          "hash": "j3c1KMzfZBM8fNYLcmg5vA=="
         }
       },
       "is_incremental": false,
@@ -65,7 +65,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Abstractions.IManageRatesService.html",
-          "hash": "AfJ8tKhXX34PXgWX7anLWA=="
+          "hash": "3dEBWJQhJDyOurJF1nyHDA=="
         }
       },
       "is_incremental": false,
@@ -149,7 +149,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.AcceptDelegate.html",
-          "hash": "Zs2+GpeiWNt0h7V2DM4nkw=="
+          "hash": "wZw/xFWHxYCKOdJS2MQaUg=="
         }
       },
       "is_incremental": false,
@@ -161,7 +161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.PolicyDelegate.html",
-          "hash": "En61p6DxwCrZYdTqSpG5mg=="
+          "hash": "upkChbQbt3dYs/mWAjfkgA=="
         }
       },
       "is_incremental": false,
@@ -173,7 +173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.HttpManageRatePolicy.html",
-          "hash": "bINjRRJVFv9HfaVN/CH6vQ=="
+          "hash": "tGzrfNvpbKqFyyolphheAw=="
         }
       },
       "is_incremental": false,
@@ -197,7 +197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.Infrastructure.ManageRateAttribute.html",
-          "hash": "+tYHe+v28+ICHOVnVYqtmQ=="
+          "hash": "8QxDbf8RUFbikMwZuVKQRQ=="
         }
       },
       "is_incremental": false,
@@ -221,7 +221,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.KeyExtractorDelegate.html",
-          "hash": "VXEs0Zs2WwOn6HBn6yxP6w=="
+          "hash": "6PW3q5D8ibBswYONauWuqQ=="
         }
       },
       "is_incremental": false,
@@ -233,7 +233,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.KeyType.html",
-          "hash": "xipzoSG4JCH+YNKMaJCiAA=="
+          "hash": "LXvhzIVI41TvLK8zxwsx3Q=="
         }
       },
       "is_incremental": false,
@@ -245,7 +245,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.ManageRatesMiddleware.html",
-          "hash": "PsUIi2yf+ytIokiQafg0bQ=="
+          "hash": "T7LDyDc2x4i2himu20/roA=="
         }
       },
       "is_incremental": false,
@@ -257,7 +257,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ManageRates.AspnetCore.ManageRatesService.html",
-          "hash": "U6B/9fasSnnf7GteESYAlg=="
+          "hash": "PLVDHlt7D+1051YNdKKRBw=="
         }
       },
       "is_incremental": false,
@@ -509,7 +509,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.ManageRatesApplicationBuilderExtensions.html",
-          "hash": "llCU78I/VUB+yPtijWhsIw=="
+          "hash": "ZkybJhK6kLWUncT8IS+Y2w=="
         }
       },
       "is_incremental": false,
@@ -521,7 +521,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.ManageRatesServiceCollectionExtensions.html",
-          "hash": "MmFL6MdxSuz4hs3WcOq5Ug=="
+          "hash": "ukFGVDdlSyyT6tXYnfnvFg=="
         }
       },
       "is_incremental": false,
@@ -533,7 +533,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.html",
-          "hash": "SrWVoX7nGtwfQ6BArGD/Ag=="
+          "hash": "9sewpWMWPi55O50kUVNGNw=="
         }
       },
       "is_incremental": false,
